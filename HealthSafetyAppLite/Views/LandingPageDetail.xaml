@@ -13,46 +13,94 @@
           Padding="40,40"
           ColumnSpacing="40"
           RowSpacing="40">
-        
-        <controls:MenuButton Text="Dynamic Assessment Tool"
+        <controls:MenuButton
+                             x:Name="DynamicTool"
+                             Text="Dynamic Assessment Tool"
                              Grid.Row="0"
                              Grid.Column="0"
-                             Image="dangersing.png"/>
+                             Image="dangersing.png">
+            <controls:MenuButton.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding NavigationCommand}" 
+                                      CommandParameter="{Binding Source={x:Reference DynamicTool},Path=Text}" NumberOfTapsRequired="1"/>
+            </controls:MenuButton.GestureRecognizers>
+        </controls:MenuButton>
         <controls:MenuButton Text="Cash Assessment Tool"
+                             x:Name="CashTool"
                              Grid.Column="1"
                              Grid.Row="0"
                              Image="clipboard.png"
-                             />
+                             >
+            <controls:MenuButton.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding NavigationCommand}"
+                                      CommandParameter="{Binding Source={x:Reference CashTool},Path=Text}"/>
+            </controls:MenuButton.GestureRecognizers>
+        </controls:MenuButton>
         <controls:MenuButton Text="Work Station Assessment Tool"
+                             x:Name="WorkTool"
                              Grid.Row="1"
                              Grid.Column="0"
                              Image="workstation.png"
-                             />
+                             >
+            <controls:MenuButton.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding NavigationCommand}"
+                                      CommandParameter="{Binding Source={x:Reference WorkTool},Path=Text}"/>
+            </controls:MenuButton.GestureRecognizers>
+        </controls:MenuButton>
         <controls:MenuButton Text="Manual Handling Risk Assessment Tool"
+                             x:Name="ManualTool"
                              Grid.Row="1"
                              Grid.Column="1"
                              Image="riskmanagement.png"
-                             />
+                             >
+            <controls:MenuButton.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding NavigationCommand}"
+                                      CommandParameter="{Binding Source={x:Reference ManualTool},Path=Text}"/>
+            </controls:MenuButton.GestureRecognizers>
+        </controls:MenuButton>
         <controls:MenuButton Text="Accident Record Form Tool"
+                             x:Name="AccidentTool"
                              Grid.Row="2"
                              Grid.Column="0"
                              Image="securitycamera.png"
-                             />
+                             >
+            <controls:MenuButton.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding NavigationCommand}"
+                                      CommandParameter="{Binding Source={x:Reference AccidentTool},Path=Text}"/>
+            </controls:MenuButton.GestureRecognizers>
+        </controls:MenuButton>
         <controls:MenuButton Text="Safe System of Work Tool"
+                             x:Name="SafeTool"
                              Grid.Row="2"
                              Grid.Column="1"
                              Image="team.png"
-                             />
+                             >
+            <controls:MenuButton.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding NavigationCommand}"
+                                      CommandParameter="{Binding Source={x:Reference SafeTool},Path=Text}"/>
+            </controls:MenuButton.GestureRecognizers>
+        </controls:MenuButton>
         <controls:MenuButton Text="Audit Form Tool"
+                             x:Name="AuditTool"
                              Grid.Row="3"
                              Grid.Column="0"
                              Image="search.png"
-                             />
+                             >
+            <controls:MenuButton.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding NavigationCommand}"
+                                      CommandParameter="{Binding Source={x:Reference AuditTool},Path=Text}"/>
+            </controls:MenuButton.GestureRecognizers>
+        </controls:MenuButton>
         <controls:MenuButton Text="ToolBox Talks"
+                             x:Name="ToolBox"
                              Grid.Row="3"
                              Grid.Column="1"
                              Image="toolbox.png"
-                             />
+                             >
+            <controls:MenuButton.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding NavigationCommand}"
+                                      CommandParameter="{Binding Source={x:Reference ToolBox},Path=Text}"/>
+            </controls:MenuButton.GestureRecognizers>
+        </controls:MenuButton>
 
         <controls:CustomSwitch Grid.Row="4"
                              Grid.Column="1" ></controls:CustomSwitch>
