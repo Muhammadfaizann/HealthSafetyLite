@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:svg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             x:Class="HealthSafetyAppLite.Views.TopicViews.DynamicToolPage"
+             NavigationPage.HasBackButton="True">
+    <ScrollView>
+        
+   
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+          ColumnDefinitions="Auto,100"
+          Padding="20">
+        <Label Text="Dynamic Risk Assessment Tool" FontSize="16"
+               TextColor="#000000" FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Grid.Row="0"
+               Grid.Column="0"
+               Grid.ColumnSpan="2"/>
+        <Label Text="Mentinence Dynamic/Point of Work Risk Assessment"
+               Grid.Row="1"
+               Grid.Column="0"
+               Grid.ColumnSpan="2" HorizontalOptions="Center"
+               FontSize="12" FontAttributes="Bold" TextColor="#000000"/>
+        <Frame BackgroundColor="{StaticResource HsBackground}"
+               Grid.Row="2"
+               Grid.Column="0"
+               Grid.ColumnSpan="2">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="For: " FontSize="12" TextColor="{StaticResource HealthSafetyGreen}"
+                       FontAttributes="Bold"/>
+                <Label Text="lorem sample text lorem pixel sample"
+                       TextColor="#000000" FontSize="12" FontAttributes="Bold"/>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="{StaticResource HsBackground}"
+               Grid.Row="3"
+               Grid.Column="0"
+               Grid.ColumnSpan="2">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Use on: " FontSize="12" TextColor="{StaticResource HealthSafetyGreen}"
+                       FontAttributes="Bold"/>
+                <Label Text="lorem sample text lorem pixel sample"
+                       TextColor="#000000" FontSize="12" FontAttributes="Bold"/>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="{StaticResource HsBackground}"
+               Grid.Row="4"
+               Grid.Column="0"
+               Grid.ColumnSpan="2">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Name: " FontSize="12" TextColor="{StaticResource HealthSafetyGreen}"
+                       FontAttributes="Bold"/>
+                <Entry 
+                       TextColor="#000000" FontSize="12" FontAttributes="Bold"/>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="{StaticResource HsBackground}"
+               Grid.Row="5"
+               Grid.Column="0"
+               >
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Date: " FontSize="12" TextColor="{StaticResource HealthSafetyGreen}"
+                       FontAttributes="Bold"
+                       />
+                <DatePicker VerticalOptions="Start"/>
+            </StackLayout>
+        </Frame>
+        <svg:SvgCachedImage
+            Grid.Row="5"
+            Grid.Column="2"
+            Margin="-20,0"/>
+        <Frame BackgroundColor="{StaticResource HsBackground}"
+               Grid.Row="6"
+               Grid.Column="0"
+               Grid.ColumnSpan="2">
+            <StackLayout >
+                <Label Text="Location Name: " FontSize="12" TextColor="{StaticResource HealthSafetyGreen}"
+                       FontAttributes="Bold"/>
+                <Entry 
+                       TextColor="#000000" FontSize="12" FontAttributes="Bold"/>
+            </StackLayout>
+        </Frame>
+        <Frame BackgroundColor="{StaticResource HsBackground}"
+               Grid.Row="7"
+               Grid.Column="0"
+               Grid.ColumnSpan="2">
+            <StackLayout >
+                <Label Text="Task Description: " FontSize="12" TextColor="{StaticResource HealthSafetyGreen}"
+                       FontAttributes="Bold"/>
+                <Entry 
+                       TextColor="#000000" FontSize="12" FontAttributes="Bold"/>
+            </StackLayout>
+        </Frame>
+            <Frame BackgroundColor="{StaticResource HsBackground}"
+                         Grid.Row="8"
+                         Grid.Column="0"
+                         Grid.ColumnSpan="2"
+                        CornerRadius="10"
+                   Padding="0">
+                <StackLayout Orientation="Horizontal" >
+                    <Frame BackgroundColor="{StaticResource HealthSafetyGreen}"
+                       CornerRadius="10">
+                        <Label Text="Step 1-Stop" TextColor="White"
+                               HorizontalOptions="StartAndExpand"/>
+                    </Frame>
+                    <Label Text="Before starting think through the task"
+                           VerticalOptions="Center" TextColor="{StaticResource HealthSafetyGreen}"/>
+                </StackLayout>
+            </Frame>
+            <Label Grid.Row="9" Grid.Column="0" 
+               Text="Are you fit suitably competent to carry out the task(s)"
+                   TextColor="#000000"  FontAttributes="Bold"/>
+            <Switch Grid.Row="9" Grid.Column="1"
+                    OnColor="Green"
+                    ThumbColor="Green"/>
+            <Label Grid.Row="10" Grid.Column="0" 
+               Text="Do you have the relevant permant and documentation?"
+                   TextColor="#000000"  FontAttributes="Bold"/>
+            <Switch Grid.Row="10" Grid.Column="1"
+                    OnColor="Green"
+                    ThumbColor="Green"/>
+            <Label Grid.Row="11" Grid.Column="0" 
+               Text="Do you have the correct PPE and tools for the task?"
+                   TextColor="#000000"  FontAttributes="Bold"/>
+            <Switch Grid.Row="11" Grid.Column="1"
+                    OnColor="Green"
+                    ThumbColor="Green"/>
+            <Label Grid.Row="12" Grid.Column="0" 
+               Text="Do you have the suitable access into the work area?"
+                   TextColor="#000000"  FontAttributes="Bold"/>
+            <Switch Grid.Row="12" Grid.Column="1"
+                    OnColor="Green"
+                    ThumbColor="Green"/>
+            <Frame Grid.Row="13"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   BackgroundColor="{StaticResource HsBackground}">
+                <Label Text="If you have answered be to any of above inform your team lead"
+                       TextColor="{StaticResource HsRed}"/>
+            </Frame>
+            <Frame BackgroundColor="{StaticResource HsBackground}"
+                         Grid.Row="14"
+                         Grid.Column="0"
+                         Grid.ColumnSpan="2"
+                        CornerRadius="10"
+                   Padding="0">
+                <StackLayout Orientation="Horizontal" >
+                    <Frame BackgroundColor="{StaticResource HealthSafetyGreen}"
+                       CornerRadius="10">
+                        <Label Text="Step2-Stop" TextColor="White"
+                               HorizontalOptions="StartAndExpand"/>
+                    </Frame>
+                    <Label Text="Spot the hazards identified"
+                           VerticalOptions="Center" TextColor="{StaticResource HealthSafetyGreen}"/>
+                </StackLayout>
+            </Frame>
+            <Label Grid.Row="15" Text="Tick the hazards identified"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   HorizontalOptions="Center" TextColor="#000000"/>
+            <Label Text="Slip,Trip,Falls"
+               Grid.Row="16"
+               Grid.Column="0"
+                   TextColor="#000000"/>
+            <CheckBox Grid.Row="16"
+                  Grid.Column="1"
+                  HorizontalOptions="End"
+                      Color="Green"/>
+            <Label Text="Work at height"
+               Grid.Row="17"
+               Grid.Column="0"
+                   TextColor="#000000"/>
+            <CheckBox Grid.Row="17"
+                  Grid.Column="1"
+                  HorizontalOptions="End"
+                      Color="Green"/>
+            <Label Text="Risk of fall from Height"
+               Grid.Row="18"
+               Grid.Column="0"
+                   TextColor="#000000"/>
+            <CheckBox Grid.Row="18"
+                  Grid.Column="1"
+                  HorizontalOptions="End"
+                      Color="Green"/>
+            <StackLayout Grid.Row="19"
+                         Grid.Column="0"
+                         Grid.ColumnSpan="2"
+                         Orientation="Horizontal">
+                <Button Text="Open Drafts" BackgroundColor="{StaticResource HealthSafetyGreen}"
+                        TextColor="White" CornerRadius="10"
+                        FontSize="12"/>
+                <Button Text="Save as Drafts" BackgroundColor="{StaticResource HealthSafetyGreen}"
+                        TextColor="White" CornerRadius="10" FontSize="12" />
+                <Button Text="Save as PDF" BackgroundColor="{StaticResource HealthSafetyGreen}"
+                        TextColor="White" CornerRadius="10" FontSize="12"/>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>
