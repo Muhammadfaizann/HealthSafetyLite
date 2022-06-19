@@ -24,7 +24,7 @@
         </StackLayout>
 
         <Button Text="SIGN UP" Command="{Binding SignUpCommand}"
-                    BackgroundColor="{StaticResource HsGreen}" Margin="60,60,60,0"
+                    BackgroundColor="{StaticResource HealthSafetyGreen}" Margin="60,60,60,0"
                     CornerRadius="{ OnPlatform Android=30, iOS=20}"
                     TextColor="White"/>
         <forms:SvgCachedImage

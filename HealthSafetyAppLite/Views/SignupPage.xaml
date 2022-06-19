@@ -18,7 +18,7 @@
         <controls:RoundedEntry PlaceHolder="Telephone Number" Text="{Binding Telephone}"/>
 
         <Button Text="Next" Command="{Binding SecondSignupPageCommand}"
-                    BackgroundColor="{StaticResource HsGreen}" Margin="0,60,0,0"
+                    BackgroundColor="{StaticResource HealthSafetyGreen}" Margin="0,60,0,0"
                     CornerRadius="{ OnPlatform Android=30, iOS=20}"
                      FontAttributes="Bold"
                     TextColor="White"/>
