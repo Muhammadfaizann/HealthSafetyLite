@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthSafetyAppLite.Controls.CustomSwitch" HeightRequest="25" Padding="1" WidthRequest="50" CornerRadius="50" BorderColor="Black">
+    <Grid ColumnDefinitions="*,auto,*" >
+        <Frame Grid.Column="0" HeightRequest="25" CornerRadius="50" WidthRequest="25" BorderColor="Black" BackgroundColor="{StaticResource HealthSafetyGreen}">
+            <Label Text="Yes" TextColor="Black"  Style="{StaticResource PoppinsBoldLabel}"></Label>
+        </Frame>
+        <Frame Grid.Column="1" Padding="-5" HeightRequest="50" WidthRequest="50" CornerRadius="25" ></Frame>
+        <Label Grid.Column="2"  BackgroundColor="Red" Text="No" TextColor="Black" Style="{StaticResource PoppinsBoldLabel}"></Label>
+       
+    </Grid>
+</Frame>

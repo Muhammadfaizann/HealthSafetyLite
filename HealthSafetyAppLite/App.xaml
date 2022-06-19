@@ -15,7 +15,12 @@
         <Color x:Key="HsLightGray">#E3E3E3</Color>
         <Color x:Key="HsDarkGray">#C1C1C1</Color>
         <Color x:Key="HsBackground">#E3E3E3</Color>
-
         
+        <Style x:Key="PoppinsBoldLabel" TargetType="Label">
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="FontFamily" Value="PoppinsBold" />
+        </Style>
+
     </Application.Resources>
 </Application>

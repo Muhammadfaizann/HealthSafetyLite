@@ -8,11 +8,12 @@
              Title="Health and Safety topics"
             BackgroundImageSource="background.png">
     
-    <Grid RowDefinitions="*,*,*,*"
+        <Grid RowDefinitions="*,*,*,*,25"
           ColumnDefinitions="*,*"
           Padding="40,40"
           ColumnSpacing="40"
           RowSpacing="40">
+        
         <controls:MenuButton Text="Dynamic Assessment Tool"
                              Grid.Row="0"
                              Grid.Column="0"
@@ -53,7 +54,10 @@
                              Image="toolbox.png"
                              />
 
+        <controls:CustomSwitch Grid.Row="4"
+                             Grid.Column="1" ></controls:CustomSwitch>
+        
 
     </Grid>
-       
+    
 </ContentPage>
