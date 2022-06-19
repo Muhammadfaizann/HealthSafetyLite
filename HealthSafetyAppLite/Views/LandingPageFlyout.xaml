@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:svg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             x:Class="HealthSafetyAppLite.Views.LandingPageFlyout"
+             Title="Health and Safety App"
+             BackgroundColor="{StaticResource HsBackground}">
+    <StackLayout>
+        <StackLayout Margin="0,50,0,20">
+            <Label Text="Output Folders"
+                   FontSize="25"
+                   FontFamily="PoppinsBold"
+                   TextColor="#36424D"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+        </StackLayout>
+        <Frame BackgroundColor="#E7E7E7" Margin="10">
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Image Source="pdf.png" HeightRequest="40" WidthRequest="40" HorizontalOptions="Center" VerticalOptions="Center" IsEnabled="False"/>
+        
+                <Label Text="PDF Output Folder"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       HorizontalTextAlignment="Center"
+                       FontFamily="PoppinsBold"
+                       Margin="20,0,0,0"
+                       TextColor="Black"/>
+            </StackLayout>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding EmailCommand}"/>
+            </Frame.GestureRecognizers>
+        </Frame>
+        <Frame BackgroundColor="#E7E7E7" Margin="10">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="pencil.png" HeightRequest="40" WidthRequest="40" HorizontalOptions="Center" VerticalOptions="Center" IsEnabled="False"/>
+                <Label Text="Drafts Output Folder"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontFamily="PoppinsBold"
+                       Margin="20,0,0,0"
+                       TextColor="Black"/>
+            </StackLayout>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding EmailCommand}"/>
+            </Frame.GestureRecognizers>
+        </Frame>
+        <Frame BackgroundColor="#E7E7E7" Margin="10">
+            <StackLayout Orientation="Horizontal">
+                <Image Source="Contactus.png" HeightRequest="40" WidthRequest="40" HorizontalOptions="Center" VerticalOptions="Center" IsEnabled="False"/>
+                
+                <Label Text="Contact Us"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       FontFamily="PoppinsBold"
+                       Margin="20,0,0,0"
+                       TextColor="Black"/>
+            </StackLayout>
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding EmailCommand}"/>
+            </Frame.GestureRecognizers>
+        </Frame>
+        <BoxView BackgroundColor="LightGray" VerticalOptions="End"
+                 HeightRequest="1" Margin="0,180,0,0"/>
+        <StackLayout HorizontalOptions="Center" Margin="10">
+            <Image Source="signoutoption.png" HeightRequest="40" WidthRequest="40" HorizontalOptions="Center" VerticalOptions="Center" IsEnabled="False"/>
+            <Label Text="Logout"
+                   FontFamily="PoppinsBold"
+                   FontAttributes="Bold"
+                   FontSize="16"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

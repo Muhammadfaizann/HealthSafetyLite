@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Frame xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:fontAwesome="clr-namespace:HealthSafetyAppLite.FontAwesomeIcons"
+       x:Class="HealthSafetyAppLite.Controls.MenuButton"
+       Padding="0" BackgroundColor="{StaticResource HsBackground}"
+       HasShadow="False" BorderColor="{StaticResource HsDarkGray}"
+       CornerRadius="10">
+    <Grid Padding="10" RowDefinitions="*,50">
+        <Image Grid.Row="0" x:Name="icon" HeightRequest="40" WidthRequest="40" HorizontalOptions="Center" VerticalOptions="Center" IsEnabled="False"/>
+        <StackLayout  Grid.Row="1" VerticalOptions="End">
+        <Label x:Name="txt"
+               TextColor="#000000"
+               FontAttributes="Bold"
+               FontFamily="PoppinsBold"
+               FontSize="12"
+               HorizontalTextAlignment="Center"
+               Margin="0"/>
+            </StackLayout>
+    </Grid>
+</Frame>

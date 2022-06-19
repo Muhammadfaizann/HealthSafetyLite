@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealthSafetyAppLite.Views.LandingPageDetail"
+             xmlns:controls="clr-namespace:HealthSafetyAppLite.Controls"
+             xmlns:fontAwesome="clr-namespace:HealthSafetyAppLite.FontAwesomeIcons"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             Title="Health and Safety topics"
+            BackgroundImageSource="background.png">
+    
+    <Grid RowDefinitions="*,*,*,*"
+          ColumnDefinitions="*,*"
+          Padding="40,40"
+          ColumnSpacing="40"
+          RowSpacing="40">
+        <controls:MenuButton Text="Dynamic Assessment Tool"
+                             Grid.Row="0"
+                             Grid.Column="0"
+                             Image="dangersing.png"/>
+        <controls:MenuButton Text="Cash Assessment Tool"
+                             Grid.Column="1"
+                             Grid.Row="0"
+                             Image="clipboard.png"
+                             />
+        <controls:MenuButton Text="Work Station Assessment Tool"
+                             Grid.Row="1"
+                             Grid.Column="0"
+                             Image="workstation.png"
+                             />
+        <controls:MenuButton Text="Manual Handling Risk Assessment Tool"
+                             Grid.Row="1"
+                             Grid.Column="1"
+                             Image="riskmanagement.png"
+                             />
+        <controls:MenuButton Text="Accident Record Form Tool"
+                             Grid.Row="2"
+                             Grid.Column="0"
+                             Image="securitycamera.png"
+                             />
+        <controls:MenuButton Text="Safe System of Work Tool"
+                             Grid.Row="2"
+                             Grid.Column="1"
+                             Image="team.png"
+                             />
+        <controls:MenuButton Text="Audit Form Tool"
+                             Grid.Row="3"
+                             Grid.Column="0"
+                             Image="search.png"
+                             />
+        <controls:MenuButton Text="ToolBox Talks"
+                             Grid.Row="3"
+                             Grid.Column="1"
+                             Image="toolbox.png"
+                             />
+
+
+    </Grid>
+       
+</ContentPage>
