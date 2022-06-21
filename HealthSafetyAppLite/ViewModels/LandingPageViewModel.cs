@@ -34,11 +34,11 @@ namespace HealthSafetyAppLite.ViewModels
             {
                 IsBusy = true;
                 var title = (string)item;
-                if (title == "Dynamic Assessment Tool")
+                if (title == "Dynamic Risk Assessment Tool")
                 {
                     await Navigation.PushAsync(new DynamicToolPage());
                 }
-                else if (title == "Cash Assessment Tool")
+                else if (title == "COSHH Assessment Tool")
                 {
                     await Navigation.PushAsync(new CashToolPage());
                 }

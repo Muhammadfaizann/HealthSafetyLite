@@ -1,13 +1,801 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="HealthSafetyAppLite.Views.TopicViews.CashToolPage"
              NavigationPage.HasBackButton="True">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+     <Grid RowDefinitions="*,35,60">
+    <ScrollView Grid.Row="0">
+        <Grid RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto" Padding="20" >
+            <Label
+            Grid.Row="0"
+            Style="{StaticResource PoppinsBoldLabel}"
+            Text="COSHH Assessment Tool"/>
+            <Label
+            Grid.Row="1"
+            Style="{StaticResource PoppinsBoldLabel}"
+            FontSize="14" 
+            Text="A COSHH assessment concentrates on the hazards and risks from hazardous substances in your workplace."/>
+           
+        <Frame
+               Grid.Row="2"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Name of COSHH assessor: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+        <Grid Grid.Row="3" ColumnDefinitions="*,50">
+        <Frame
+               Grid.Column="0"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Horizontal">
+                <Label Text="Date: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Label Text="19/6/2022" FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+        <Image Grid.Column="1" x:Name="icon" Source="calendar.png" HeightRequest="40" WidthRequest="40" HorizontalOptions="Center" VerticalOptions="Center" IsEnabled="False"/>
+        </Grid>
+        <Frame
+               Grid.Row="4"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Department: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+        <Frame
+               Grid.Row="5"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Task Description: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+        <Grid Grid.Row="6" ColumnDefinitions="*,50">
+        <Frame
+               Grid.Column="0"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Horizontal">
+                <Label Text="Review Date: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Label Text="19/6/2022" FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+        <Image Grid.Column="1" Source="calendar.png" HeightRequest="40" WidthRequest="40" HorizontalOptions="Center" VerticalOptions="Center" IsEnabled="False"/>
+        </Grid>
+        <Frame
+               Grid.Row="7"
+               Margin="0"
+               Padding="0"
+               HasShadow="False"
+               HeightRequest="30"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+               <Grid ColumnDefinitions="100,*">
+               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
+                       <Label Text="1. " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
+               </yummy:PancakeView>
+               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Elimination"></Label>
+               </Grid>    
+        </Frame>
+        <Grid Grid.Row="8" ColumnDefinitions="auto,50">
+            <Label Grid.Column="0" FontSize="14" 
+               Text="Is it possible to avoid the need to use hazardous substances?"
+                   TextColor="#000000"  FontAttributes="Bold"/>
+            <Switch Grid.Column="1"
+                    OnColor="Green"
+                    ThumbColor="Green"/>
+        </Grid>
+            <Frame
+               Grid.Row="9"
+               Margin="0"
+               Padding="0"
+               HasShadow="False"
+               HeightRequest="30"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+               <Grid ColumnDefinitions="100,*">
+               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
+                       <Label Text="2. " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
+               </yummy:PancakeView>
+               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Activity Details"></Label>
+               </Grid>    
+            </Frame>
+            <Label Grid.Row="10" FontSize="14" Style="{StaticResource PoppinsBoldLabel}"
+               Text="Before beginning work on the COSHH assessment process ensure you have a copy of the latest manufacturers safety data sheet (MSDS) for the substance. MSDS's are available from suppliers and manufacturers of products."
+                     FontAttributes="Bold">
+
+            </Label>
+            <Label Grid.Row="11" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyCharcoal}" HorizontalOptions="Center" FontSize="14" FontAttributes="None" Text="Describe the activity or work process."></Label>
+            <Label Grid.Row="12" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HsDarkGray}" HorizontalOptions="Center" FontSize="14" FontAttributes="None" Text="Note: Include how long the task will take, how often it will be repeated and how much of the substance is used."></Label>
+
+            <Frame
+               Grid.Row="13"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Activity: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+            <Frame
+               Grid.Row="14"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="How long activity will take? " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+            <Frame
+               Grid.Row="15"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="How often activity will be repeated? " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+             
+           <Frame
+               Grid.Row="16"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="How much substance will be used?" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+            <Frame
+               Grid.Row="17"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Location of work: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/>
+                </StackLayout>   
+            </Frame>
+            <Label Grid.Row="18" Text="Person at Risk: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+            <Grid Grid.Row="19" ColumnDefinitions="*,*">
+                <StackLayout Grid.Column="0" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Text="Employees " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                </StackLayout>
+                <StackLayout Grid.Column="1" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Text="Students " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                </StackLayout>
+
+            </Grid>
+
+            <Frame
+               Grid.Row="20"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Horizontal">
+                <Label Text="Others: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+            <Frame
+               Grid.Row="21"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Name of the substance and supplier: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+            <Frame
+               Grid.Row="22"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Substance application: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+            <Frame
+               Grid.Row="23"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Safety data sheet details: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+            <Frame
+               Grid.Row="24"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Managment emergency contact number: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+            <Frame
+               Grid.Row="25"
+               Margin="0"
+               Padding="0"
+               HasShadow="False"
+               HeightRequest="30"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+               <Grid ColumnDefinitions="100,*">
+               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
+                       <Label Text="3. " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
+               </yummy:PancakeView>
+               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Classification of the substance"></Label>
+               </Grid>    
+            </Frame>
+    <Label Grid.Row="26" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Center" FontSize="14" FontAttributes="None" Text="Tick the appropriate sign"></Label>
+        
+        <Grid Grid.Row="27" RowDefinitions="auto,auto,auto,auto,auto" 
+          ColumnDefinitions="*,*,*">
+            <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+            <CheckBox Grid.Column="0" HorizontalOptions="Start" Color="Green"/>
+            <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" HorizontalTextAlignment="Start" FontSize="14" Text="Acute Toxicity"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Serious eye irritation"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="0" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Highly Flammable"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="1"  Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start"  Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Very Toxic (Fatal)"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Respiratory Sensitiser"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="1" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Extremely Flammable"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="2"  Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start"  Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Gasses Under Pressure"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Serious Long Term Health Hazard"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="2" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Dangerous To The Environment"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="3"  Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start"  Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Harmful"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Oxidising"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="3" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Corrosive"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="4"  Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start"  Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Explosive"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="4" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Flammable"></Label>
+            </StackLayout>
+         </Grid>
+             <Frame
+               Grid.Row="28"
+               Margin="0"
+               Padding="0"
+               HasShadow="False"
+               HeightRequest="30"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+               <Grid ColumnDefinitions="100,*">
+               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
+                       <Label Text="4. " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
+               </yummy:PancakeView>
+               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Classification of the substance"></Label>
+               </Grid>    
+            </Frame>
+            
+             <Grid Grid.Row="29" ColumnDefinitions="auto,50">
+                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="4.1 Is it possible to use a liess harmful substance to do the work?">
+                    </Label>
+                <Switch Grid.Column="1"
+                        OnColor="Green"
+                        ThumbColor="Green"/>
+        </Grid>
+            
+                <Label Grid.Row="30" Style="{StaticResource PoppinsRegularLabel}"  HorizontalTextAlignment="Start" FontSize="14"  Text="4.2 Which form the substance takes?">
+                    </Label>
+             <Grid Grid.Row="31" RowDefinitions="auto,auto,auto" 
+          ColumnDefinitions="*,*,*">
+            <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+            <CheckBox Grid.Column="0" HorizontalOptions="Start" Color="Green"/>
+            <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" HorizontalTextAlignment="Start" FontSize="14" Text="Gas"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Vapour"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="0" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Mist"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="1"  Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start"  Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Fume"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Dust"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="1" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Liquid"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="2"  Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start"  Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Solid"></Label>
+            </StackLayout>
+            
+         </Grid>
+       <Frame
+               Grid.Row="32"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Horizontal">
+                <Label Text="Others: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+            
+                <Label Grid.Row="33" Style="{StaticResource PoppinsRegularLabel}"  HorizontalTextAlignment="Start" FontSize="14"  Text="4.3 Which route(s) of exposure the substance takes?">
+                    </Label>
+          <Grid Grid.Row="34" RowDefinitions="auto,auto" 
+          ColumnDefinitions="*,*,*">
+            <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+            <CheckBox Grid.Column="0" HorizontalOptions="Start" Color="Green"/>
+            <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" HorizontalTextAlignment="Start" FontSize="14" Text="Inhalation"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Skin"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="0" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Eyes"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="1"  Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start"  Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Ingestion"></Label>
+            </StackLayout>
+         </Grid>
+       <Frame
+               Grid.Row="35"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Horizontal">
+                <Label Text="Others: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+        <Label Grid.Row="36" Style="{StaticResource PoppinsRegularLabel}"  HorizontalTextAlignment="Start" FontSize="14"  Text="4.4 Workplace Exposure limits(WELs)"/>
+        <Grid  Grid.Row="37" RowDefinitions="auto,auto" >
+            <StackLayout Grid.Row="0"  Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start"  Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Long-term exposure level(8hours TWA)"></Label>
+            </StackLayout>
+            <StackLayout Grid.Row="1"  Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start"  Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Short-term exposure level(15 Mins)"></Label>
+            </StackLayout>
+        </Grid>
+       
+        <Label Grid.Row="38" Style="{StaticResource PoppinsRegularLabel}"  HorizontalTextAlignment="Start" FontSize="14"  Text="4.5 List the risk to health below from exposure to the substance:"/>
+        <Frame
+               Grid.Row="39"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/> 
+        </Frame>
+        <Label Grid.Row="40" Style="{StaticResource PoppinsRegularLabel}"  HorizontalTextAlignment="Start" FontSize="14"  Text="4.6 List the control measure e.g extraction, ventilation, supervision, include additional control for vnlnerable person where necessary"/>
+        <Frame
+               Grid.Row="41"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/> 
+        </Frame>
+        <Label Grid.Row="42" Style="{StaticResource PoppinsRegularLabel}"  HorizontalTextAlignment="Start" FontSize="14"  Text="4.7 List  compatibillity warnings incase substances can react adversely when it comes into contact in to contact with other sabstance"/>
+        <Frame
+               Grid.Row="43"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/> 
+        </Frame>
+       
+        <Grid Grid.Row="44" ColumnDefinitions="auto,50">
+                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="4.8 Is health surveillance or monitoring requried?">
+                    </Label>
+                <Switch Grid.Column="1"
+                        OnColor="Green"
+                        ThumbColor="Green"/>
+        </Grid>
+         <Label Grid.Row="45" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Center" FontSize="12"  Text="Remember health surveilance may be required for vulnerable persons eg pregnant/young  workers those with asthma, dermatitis etc">
+         </Label>
+         <Frame
+               Grid.Row="46"
+               Margin="0"
+               Padding="0"
+               HasShadow="False"
+               HeightRequest="30"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+               <Grid ColumnDefinitions="100,*">
+               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
+                       <Label Text="5. " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
+               </yummy:PancakeView>
+               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Personal protective  equipment (PPE)"></Label>
+               </Grid>    
+            </Frame>
+              <Label Grid.Row="47" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Center" FontSize="14" FontAttributes="None" Text="Identify type and specificatoins "></Label>
+        <Grid Grid.Row="48" RowDefinitions="auto,auto,auto" 
+          ColumnDefinitions="*,*,*">
+            <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+            <CheckBox Grid.Column="0" HorizontalOptions="Start" Color="Green"/>
+            <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" HorizontalTextAlignment="Start" FontSize="14" Text="Dust Mask"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Visor"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="0" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Respirator"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="1"  Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start"  Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Goggles"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Gloves"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="1" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Overalls"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="2"  Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start"  Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Footwear"></Label>
+            </StackLayout>
+            
+         </Grid>
+        
+            <Frame
+               Grid.Row="49"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Horizontal">
+                <Label Text="Others: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+            <Frame
+               Grid.Row="50"
+               Margin="0"
+               Padding="0"
+               HasShadow="False"
+               HeightRequest="30"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+               <Grid ColumnDefinitions="100,*">
+               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
+                       <Label Text="6. " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
+               </yummy:PancakeView>
+               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Control Measure"></Label>
+               </Grid>    
+            </Frame>
+             <Label Grid.Row="51" Style="{StaticResource PoppinsRegularLabel}"  HorizontalTextAlignment="Start" FontSize="14"  Text="6.1 List first aid measures and requirments"/>
+        <Frame
+               Grid.Row="52"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/> 
+        </Frame>
+        <Label Grid.Row="53" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Center" FontSize="14" FontAttributes="None" Text="Identify type and specificatoins "></Label>
+        <Grid Grid.Row="54" RowDefinitions="auto,auto" 
+          ColumnDefinitions="*,*,*">
+            <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+            <CheckBox Grid.Column="0" HorizontalOptions="Start" Color="Green"/>
+            <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" HorizontalTextAlignment="Start" FontSize="14" Text="Dry Powder"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="CO2"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="0" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Water"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="1"  Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start"  Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Foam"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Fire Blanket"></Label>
+            </StackLayout>
+           
+         </Grid>
+        <Label Grid.Row="55" Style="{StaticResource PoppinsRegularLabel}"  HorizontalTextAlignment="Start" FontSize="14"  Text="Add detials of any harmful vapours/ gases etc that substance can give rise to during combustion"/>
+        <Frame
+               Grid.Row="56"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/> 
+        </Frame>
+        <Label Grid.Row="57" Style="{StaticResource PoppinsRegularLabel}"  HorizontalTextAlignment="Start" FontSize="14"  Text="Add storage requirements for the substance."/>
+        <Frame
+               Grid.Row="58"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/> 
+        </Frame>
+        <Label Grid.Row="59" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Center" FontSize="14" FontAttributes="None" Text="Indicate below the disposal of waste substance and containers"></Label>
+        <Grid Grid.Row="60" RowDefinitions="auto,auto" 
+          ColumnDefinitions="*,*,*">
+            <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
+            <CheckBox Grid.Column="0" HorizontalOptions="Start" Color="Green"/>
+            <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" HorizontalTextAlignment="Start" FontSize="14" Text="Hazardous"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="General waste"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="2" Grid.Row="0" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Biological waste"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="1"  Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start"  Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Return to suplier"></Label>
+            </StackLayout>
+           
+         </Grid>
+         <Frame
+               Grid.Row="61"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Horizontal">
+                <Label Text="Others: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+        <Grid Grid.Row="62" ColumnDefinitions="*,50">
+                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="Is exposure adequately contorlled?">
+                    </Label>
+                <Switch Grid.Column="1"
+                        OnColor="Green"
+                        ThumbColor="Green"/>
+        </Grid>
+        <Frame
+               Grid.Row="63"
+               Margin="0"
+               Padding="0"
+               HasShadow="False"
+               HeightRequest="30"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+               <Grid ColumnDefinitions="100,*">
+               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
+                       <Label Text="Attachments " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
+               </yummy:PancakeView>
+               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="End" FontSize="14" Text="0 of 0 of total 10"></Label>
+               </Grid>    
+        </Frame>
+            <Grid Grid.Row="64" ColumnDefinitions="*,*,*">
+            <Button Grid.Column="0"
+            Text="Previous"
+            BackgroundColor="{StaticResource HsBackground}"
+            FontFamily="PoppinsRegular"
+            TextColor="{StaticResource HealthSafetyCharcoal}"
+            CornerRadius="10"
+            FontSize="14"/>
+                <Button Grid.Column="1"
+            Text="Previous"
+            BackgroundColor="{StaticResource HsBackground}"
+            FontFamily="PoppinsRegular"
+            TextColor="{StaticResource HealthSafetyCharcoal}"
+            CornerRadius="10"
+            FontSize="14"/>
+           
+            <Button Grid.Column="2"
+            Text="Previous"
+            BackgroundColor="{StaticResource HsBackground}"
+            FontFamily="PoppinsRegular"
+            TextColor="{StaticResource HealthSafetyCharcoal}"
+            CornerRadius="10"
+            FontSize="14"/>
+                </Grid>
+            <Grid Grid.Row="65" ColumnDefinitions="*,*">
+            <Button Grid.Column="0"
+            Text="Take Photo"
+            BackgroundColor="{StaticResource HsBackground}"
+            FontFamily="PoppinsRegular"
+            TextColor="{StaticResource HealthSafetyCharcoal}"
+            CornerRadius="10"
+            FontSize="14"/>
+                <Button Grid.Column="1"
+            Text="Pick Photo"
+            BackgroundColor="{StaticResource HsBackground}"
+            FontFamily="PoppinsRegular"
+            TextColor="{StaticResource HealthSafetyCharcoal}"
+            CornerRadius="10"
+            FontSize="14"/>
+           
+           
+        </Grid>
+                
+
+        </Grid>
+    
+    </ScrollView>
+    <Grid Grid.Row="1" ColumnDefinitions="*,*,*" >
+        <Button Grid.Column="0"
+        Text="Open Drafts"
+        BackgroundColor="{StaticResource HealthSafetyGreen}"
+        TextColor="White"
+        CornerRadius="10"
+        FontFamily="PoppinsBold"
+        FontSize="12"/>
+        <Button Grid.Column="1"
+            Text="Save as Drafts"
+            BackgroundColor="{StaticResource HealthSafetyGreen}"
+            TextColor="White"
+            CornerRadius="10"
+            FontFamily="PoppinsBold"
+            FontSize="12" />
+        <Button Grid.Column="2"
+            Text="Save as PDF"
+            BackgroundColor="{StaticResource HealthSafetyGreen}"
+            TextColor="White"
+            FontFamily="PoppinsBold"
+            CornerRadius="10"
+            FontSize="12"/>
+    </Grid>
+    <Frame Grid.Row="2">
+
+        <Label Text="space for ad" VerticalOptions="Start" VerticalTextAlignment="Start" HorizontalOptions="Center"></Label>
+    </Frame>
+    </Grid>
 </ContentPage>

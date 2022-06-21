@@ -169,5 +169,7 @@
     <BundleResource Include="Resources\signoutoption.svg" />
     <BundleResource Include="Resources\Contactus.png" />
     <BundleResource Include="Resources\Contactus.svg" />
+    <BundleResource Include="Resources\calendar.png" />
+    <BundleResource Include="Resources\calendar.svg" />
   </ItemGroup>
 </Project>

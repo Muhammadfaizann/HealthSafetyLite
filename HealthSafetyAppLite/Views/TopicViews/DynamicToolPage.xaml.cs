@@ -16,5 +16,10 @@ namespace HealthSafetyAppLite.Views.TopicViews
         {
             InitializeComponent();
         }
+
+        void AddLine_Clicked(System.Object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
