@@ -1,13 +1,105 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:HealthSafetyAppLite.Controls"
              x:Class="HealthSafetyAppLite.Views.TopicViews.ToolBoxPage"
              NavigationPage.HasBackButton="True">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to ToolBox Page!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+   <Grid RowDefinitions="*,*,*,*"
+          ColumnDefinitions="*,*"
+          Padding="40,40"
+          ColumnSpacing="40"
+          RowSpacing="40">
+        <controls:MenuButton
+                             x:Name="abrasiveWheels"
+                             Text="ABRASIVE WHEELS"
+                             Grid.Row="0"
+                             Grid.Column="0"
+                             Image="dangersing.png">
+            <controls:MenuButton.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding NavigationCommand}" 
+                                      CommandParameter="{Binding Source={x:Reference abrasiveWheels},Path=Text}" NumberOfTapsRequired="1"/>
+            </controls:MenuButton.GestureRecognizers>
+        </controls:MenuButton>
+        <controls:MenuButton
+                             x:Name="electricalTools"
+                             Text="ELECTRICAL TOOLS"
+                             Grid.Column="1"
+                             Grid.Row="0"
+                             Image="clipboard.png"
+                             >
+            <controls:MenuButton.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding NavigationCommand}"
+                                      CommandParameter="{Binding Source={x:Reference electricalTools},Path=Text}"/>
+            </controls:MenuButton.GestureRecognizers>
+        </controls:MenuButton>
+        <controls:MenuButton Text="ELECTRICITY"
+                             x:Name="electricity"
+                             Grid.Row="1"
+                             Grid.Column="0"
+                             Image="workstation.png"
+                             >
+            <controls:MenuButton.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding NavigationCommand}"
+                                      CommandParameter="{Binding Source={x:Reference electricity},Path=Text}"/>
+            </controls:MenuButton.GestureRecognizers>
+        </controls:MenuButton>
+        <controls:MenuButton Text="FIRE"
+                             x:Name="fire"
+                             Grid.Row="1"
+                             Grid.Column="1"
+                             Image="riskmanagement.png"
+                             >
+            <controls:MenuButton.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding NavigationCommand}"
+                                      CommandParameter="{Binding Source={x:Reference fire},Path=Text}"/>
+            </controls:MenuButton.GestureRecognizers>
+        </controls:MenuButton>
+        <controls:MenuButton Text="LADDER"
+                             x:Name="ladder"
+                             Grid.Row="2"
+                             Grid.Column="0"
+                             Image="securitycamera.png"
+                             >
+            <controls:MenuButton.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding NavigationCommand}"
+                                      CommandParameter="{Binding Source={x:Reference ladder},Path=Text}"/>
+            </controls:MenuButton.GestureRecognizers>
+        </controls:MenuButton>
+        <controls:MenuButton Text="HOUSEKEEPING-SLIPS, TRIPS AND FALLS"
+                             x:Name="houseKeeping"
+                             Grid.Row="2"
+                             Grid.Column="1"
+                             Image="team.png"
+                             >
+            <controls:MenuButton.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding NavigationCommand}"
+                                      CommandParameter="{Binding Source={x:Reference houseKeeping},Path=Text}"/>
+            </controls:MenuButton.GestureRecognizers>
+        </controls:MenuButton>
+        <controls:MenuButton Text="HAZARDOUS SUBSTANCES"
+                             x:Name="hazardousSubs"
+                             Grid.Row="3"
+                             Grid.Column="0"
+                             Image="search.png"
+                             >
+            <controls:MenuButton.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding NavigationCommand}"
+                                      CommandParameter="{Binding Source={x:Reference hazardousSubs},Path=Text}"/>
+            </controls:MenuButton.GestureRecognizers>
+        </controls:MenuButton>
+        <controls:MenuButton Text="HAND TOOL SAFETY"
+                              x:Name="handTool"
+                             Grid.Row="3"
+                             Grid.Column="1"
+                             Image="toolbox.png"
+                             >
+            <controls:MenuButton.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding NavigationCommand}"
+                                      CommandParameter="{Binding Source={x:Reference handTool},Path=Text}"/>
+            </controls:MenuButton.GestureRecognizers>
+        </controls:MenuButton>
+        
+
+    </Grid>
+    
 </ContentPage>
