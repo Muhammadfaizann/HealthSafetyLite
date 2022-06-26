@@ -5,7 +5,8 @@
              xmlns:controls="clr-namespace:HealthSafetyAppLite.Controls"
              xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              BackgroundImage="background.png"
-             x:Class="HealthSafetyAppLite.Views.LoginPage">
+             x:Class="HealthSafetyAppLite.Views.LoginPage"
+             >
     <StackLayout Padding="40,80,40,40" VerticalOptions="Center" 
                      HorizontalOptions="FillAndExpand" x:DataType="vm:LoginViewModel">
         <Label Text="Hello" FontSize="40" HorizontalOptions="Start"
