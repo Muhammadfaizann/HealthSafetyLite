@@ -2,12 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="HealthSafetyAppLite.Views.TopicViews.CashToolPage"
+             BackgroundImage="background.png"
              NavigationPage.HasBackButton="True">
    <Grid RowDefinitions="*,35,60">
     <ScrollView Grid.Row="0">
         <Grid RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto" Padding="20" >
             <Label
             Grid.Row="0"
+            FontSize="20"
             Style="{StaticResource PoppinsBoldLabel}"
             Text="COSHH Assessment Tool"/>
             <Label
@@ -231,7 +233,7 @@
                BackgroundColor="{StaticResource HsBackground}">
                 <StackLayout Orientation="Horizontal">
                 <Label Text="Others: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
-                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/>
+                <Entry FontSize="14" BackgroundColor="White" WidthRequest="250" FontAttributes="Bold"/>
                 </StackLayout>
                     
         </Frame>
@@ -308,63 +310,63 @@
             </Frame>
     <Label Grid.Row="26" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Center" FontSize="14" FontAttributes="None" Text="Tick the appropriate sign"></Label>
         
-        <Grid Grid.Row="27" RowDefinitions="auto,auto,auto,auto,auto" 
-          ColumnDefinitions="*,*,*">
+        <Grid Grid.Row="27" RowDefinitions="40,40,40,40,40,40,40" 
+          ColumnDefinitions="auto,auto">
             <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
-            <CheckBox Grid.Column="0" HorizontalOptions="Start" Color="Green"/>
-            <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" HorizontalTextAlignment="Start" FontSize="14" Text="Acute Toxicity"></Label>
+            <CheckBox  HorizontalOptions="Start" Color="Green"/>
+            <Label  Style="{StaticResource PoppinsBoldLabel}" HorizontalTextAlignment="Start" FontSize="14" Text="Acute Toxicity"></Label>
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Horizontal">
-                <CheckBox HorizontalOptions="Start" Color="Green"/>
-                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Serious eye irritation"></Label>
+                <CheckBox HorizontalOptions="Start" Color="Green" />
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalTextAlignment="Start"  HorizontalOptions="Start" FontSize="14" Text="Serious eye irritation"></Label>
             </StackLayout>
-            <StackLayout Grid.Column="2" Grid.Row="0" Orientation="Horizontal">
+            <StackLayout Grid.Column="0" Grid.Row="1" Orientation="Horizontal">
                 <CheckBox HorizontalOptions="Start" Color="Green"/>
-                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Highly Flammable"></Label>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" HorizontalTextAlignment="Start"  FontSize="14" Text="Highly Flammable"></Label>
             </StackLayout>
-            <StackLayout Grid.Column="0" Grid.Row="1"  Orientation="Horizontal">
+            <StackLayout Grid.Column="1" Grid.Row="1"  Orientation="Horizontal">
                 <CheckBox HorizontalOptions="Start"  Color="Green"/>
-                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Very Toxic (Fatal)"></Label>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start"  HorizontalTextAlignment="Start"  FontSize="14" Text="Very Toxic (Fatal)"></Label>
             </StackLayout>
-            <StackLayout Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+            <StackLayout Grid.Column="0" Grid.Row="2" Orientation="Horizontal">
                 <CheckBox HorizontalOptions="Start" Color="Green"/>
-                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Respiratory Sensitiser"></Label>
-            </StackLayout>
-            <StackLayout Grid.Column="2" Grid.Row="1" Orientation="Horizontal">
-                <CheckBox HorizontalOptions="Start" Color="Green"/>
-                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Extremely Flammable"></Label>
-            </StackLayout>
-            <StackLayout Grid.Column="0" Grid.Row="2"  Orientation="Horizontal">
-                <CheckBox HorizontalOptions="Start"  Color="Green"/>
-                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Gasses Under Pressure"></Label>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start"  HorizontalTextAlignment="Start"  FontSize="14" Text="Respiratory Sensitiser"></Label>
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
                 <CheckBox HorizontalOptions="Start" Color="Green"/>
-                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Serious Long Term Health Hazard"></Label>
-            </StackLayout>
-            <StackLayout Grid.Column="2" Grid.Row="2" Orientation="Horizontal">
-                <CheckBox HorizontalOptions="Start" Color="Green"/>
-                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Dangerous To The Environment"></Label>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start"  HorizontalTextAlignment="Start"  FontSize="14" Text="Extremely Flammable"></Label>
             </StackLayout>
             <StackLayout Grid.Column="0" Grid.Row="3"  Orientation="Horizontal">
                 <CheckBox HorizontalOptions="Start"  Color="Green"/>
-                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Harmful"></Label>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start"  HorizontalTextAlignment="Start"  FontSize="14" Text="Gasses Under Pressure"></Label>
             </StackLayout>
             <StackLayout Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
                 <CheckBox HorizontalOptions="Start" Color="Green"/>
-                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Oxidising"></Label>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start"   HorizontalTextAlignment="Start"  FontSize="14" Text="Serious Long Term Health Hazard"></Label>
             </StackLayout>
-            <StackLayout Grid.Column="2" Grid.Row="3" Orientation="Horizontal">
+            <StackLayout Grid.Column="0" Grid.Row="4" Orientation="Horizontal">
                 <CheckBox HorizontalOptions="Start" Color="Green"/>
-                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Corrosive"></Label>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start"   HorizontalTextAlignment="Start" FontSize="14" Text="Dangerous To The Environment"></Label>
             </StackLayout>
-            <StackLayout Grid.Column="0" Grid.Row="4"  Orientation="Horizontal">
+            <StackLayout Grid.Column="1" Grid.Row="4"  Orientation="Horizontal">
                 <CheckBox HorizontalOptions="Start"  Color="Green"/>
-                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Explosive"></Label>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start"  HorizontalTextAlignment="Start"  FontSize="14" Text="Harmful"></Label>
             </StackLayout>
-            <StackLayout Grid.Column="1" Grid.Row="4" Orientation="Horizontal">
+            <StackLayout Grid.Column="0" Grid.Row="5" Orientation="Horizontal">
                 <CheckBox HorizontalOptions="Start" Color="Green"/>
-                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" Text="Flammable"></Label>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start"  HorizontalTextAlignment="Start"  FontSize="14" Text="Oxidising"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="5" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start"  HorizontalTextAlignment="Start"  FontSize="14" Text="Corrosive"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="0" Grid.Row="6"  Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start"  Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start"  HorizontalTextAlignment="Start"  FontSize="14" Text="Explosive"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.Row="6" Orientation="Horizontal">
+                <CheckBox HorizontalOptions="Start" Color="Green"/>
+                <Label Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start"  HorizontalTextAlignment="Start"  FontSize="14" Text="Flammable"></Label>
             </StackLayout>
          </Grid>
              <Frame
@@ -720,7 +722,7 @@
                <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
                        <Label Text="Attachments " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
                </yummy:PancakeView>
-               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="End" FontSize="14" Text="0 of 0 of total 10"></Label>
+               <Label Grid.Column="1" Padding="10" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="End" FontSize="14" Text="0 of 0 of total 10"></Label>
                </Grid>    
         </Frame>
             <Grid Grid.Row="64" ColumnDefinitions="*,*,*">
@@ -770,7 +772,7 @@
         </Grid>
     
     </ScrollView>
-    <Grid Grid.Row="1" ColumnDefinitions="*,*,*" >
+    <Grid Grid.Row="1" Padding="10,0,10,0" ColumnDefinitions="*,*,*" >
         <Button Grid.Column="0"
         Text="Open Drafts"
         BackgroundColor="{StaticResource HealthSafetyGreen}"

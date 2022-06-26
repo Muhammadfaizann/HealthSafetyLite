@@ -1,13 +1,397 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="HealthSafetyAppLite.Views.TopicViews.AccidentToolPage"
+             BackgroundImage="background.png"
              NavigationPage.HasBackButton="True">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Accident Record Form Tool!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <Grid RowDefinitions="*,35,60">
+    <ScrollView Grid.Row="0">
+        <Grid RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto" Padding="20" >
+            <Label
+            Grid.Row="0"
+            FontSize="20"
+            Style="{StaticResource PoppinsBoldLabel}"
+            Text="Accident record form"/>
+            <Frame
+               Grid.Row="1"
+               Margin="0"
+               Padding="0"
+               HasShadow="False"
+               HeightRequest="40"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+               <Grid ColumnDefinitions="100,*">
+               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
+                       <Label Text="1. " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
+               </yummy:PancakeView>
+               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="About the person involved with accident / incident"></Label>
+               </Grid>    
+        </Frame>
+        <Frame
+               Grid.Row="2"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Name: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+        <Frame
+               Grid.Row="3"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Address: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+        <Frame
+               Grid.Row="4"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="City/Town: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+        <Frame
+               Grid.Row="5"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Postcode: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+        <Frame
+               Grid.Row="6"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Telephone: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+        <Frame
+               Grid.Row="7"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Occupation: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+            <Frame
+               Grid.Row="8"
+               Margin="0"
+               Padding="0"
+               HasShadow="False"
+               HeightRequest="40"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+               <Grid ColumnDefinitions="100,*">
+               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
+                       <Label Text="2. " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
+               </yummy:PancakeView>
+               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Details of perosn reporting this accident/ incident."></Label>
+               </Grid>    
+            </Frame>
+            <Frame
+               Grid.Row="9"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Name: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+        <Frame
+               Grid.Row="10"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Address: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+        <Frame
+               Grid.Row="11"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="City/Town: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+        <Frame
+               Grid.Row="12"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Postcode: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+        <Frame
+               Grid.Row="13"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Telephone: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+        <Frame
+               Grid.Row="14"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Occupation: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+           <Frame
+               Grid.Row="15"
+               Margin="0"
+               Padding="0"
+               HasShadow="False"
+               HeightRequest="40"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+               <Grid ColumnDefinitions="100,*">
+               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
+                       <Label Text="3. " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
+               </yummy:PancakeView>
+               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Details of accident/ incident and injury."></Label>
+               </Grid>    
+            </Frame>
+        <Grid Grid.Row="16" ColumnDefinitions="*,50">
+        <Frame
+               Grid.Column="0"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Horizontal">
+                <Label Text="Date: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Label Text="19/6/2022" FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+        <Image Grid.Column="1" x:Name="icon" Source="calendar.png" HeightRequest="40" WidthRequest="40" HorizontalOptions="Center" VerticalOptions="Center" IsEnabled="False"/>
+        </Grid>
+        <Grid Grid.Row="17" ColumnDefinitions="*,50">
+        <Frame
+               Grid.Column="0"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Horizontal">
+                <Label Text="Time: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Label Text="00:00" FontSize="14" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+        <Image Grid.Column="1" Source="Clock.png" HeightRequest="40" WidthRequest="40" HorizontalOptions="Center" VerticalOptions="Center" IsEnabled="False"/>
+        </Grid>
+           
+
+            <Frame
+               Grid.Row="18"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Where did the accident/injury take place? " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/>
+                </StackLayout>
+            </Frame>
+            
+            <Frame
+               Grid.Row="19"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="How the accident happened, give the cause if you can?" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" WidthRequest="250" FontAttributes="Bold"/>
+                </StackLayout>
+            </Frame>
+            <Frame
+               Grid.Row="20"
+               Margin="0"
+               Padding="10"
+               HasShadow="False"
+               BorderColor="{StaticResource HsDarkGray}"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+                <StackLayout Orientation="Vertical">
+                <Label Text="Details of accident/injury? " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Entry FontSize="14" BackgroundColor="White" FontAttributes="Bold"/>
+                </StackLayout>
+                    
+        </Frame>
+            
+        <Frame
+               Grid.Row="21"
+               Margin="0"
+               Padding="0"
+               HasShadow="False"
+               HeightRequest="30"
+               CornerRadius="10"
+               BackgroundColor="{StaticResource HsBackground}">
+               <Grid ColumnDefinitions="100,*">
+               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
+                       <Label Text="Attachments "  Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
+               </yummy:PancakeView>
+               <Label Grid.Column="1" Padding="10" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="End" FontSize="14" Text="0 of 0 of total 10"></Label>
+               </Grid>    
+        </Frame>
+            <Grid Grid.Row="22" ColumnDefinitions="*,*,*">
+            <Button Grid.Column="0"
+            Text="Previous"
+            BackgroundColor="{StaticResource HsBackground}"
+            FontFamily="PoppinsRegular"
+            TextColor="{StaticResource HealthSafetyCharcoal}"
+            CornerRadius="10"
+            FontSize="14"/>
+                <Button Grid.Column="1"
+            Text="Previous"
+            BackgroundColor="{StaticResource HsBackground}"
+            FontFamily="PoppinsRegular"
+            TextColor="{StaticResource HealthSafetyCharcoal}"
+            CornerRadius="10"
+            FontSize="14"/>
+           
+            <Button Grid.Column="2"
+            Text="Previous"
+            BackgroundColor="{StaticResource HsBackground}"
+            FontFamily="PoppinsRegular"
+            TextColor="{StaticResource HealthSafetyCharcoal}"
+            CornerRadius="10"
+            FontSize="14"/>
+                </Grid>
+            <Grid Grid.Row="23" ColumnDefinitions="*,*">
+            <Button Grid.Column="0"
+            Text="Take Photo"
+            BackgroundColor="{StaticResource HsBackground}"
+            FontFamily="PoppinsRegular"
+            TextColor="{StaticResource HealthSafetyCharcoal}"
+            CornerRadius="10"
+            FontSize="14"/>
+                <Button Grid.Column="1"
+            Text="Pick Photo"
+            BackgroundColor="{StaticResource HsBackground}"
+            FontFamily="PoppinsRegular"
+            TextColor="{StaticResource HealthSafetyCharcoal}"
+            CornerRadius="10"
+            FontSize="14"/>
+           
+           
+        </Grid>
+                
+
+        </Grid>
+    
+    </ScrollView>
+    <Grid Grid.Row="1" Padding="10,0,10,0" ColumnDefinitions="*,*,*" >
+        <Button Grid.Column="0"
+        Text="Open Drafts"
+        BackgroundColor="{StaticResource HealthSafetyGreen}"
+        TextColor="White"
+        CornerRadius="10"
+        FontFamily="PoppinsBold"
+        FontSize="12"/>
+        <Button Grid.Column="1"
+            Text="Save as Drafts"
+            BackgroundColor="{StaticResource HealthSafetyGreen}"
+            TextColor="White"
+            CornerRadius="10"
+            FontFamily="PoppinsBold"
+            FontSize="12" />
+        <Button Grid.Column="2"
+            Text="Save as PDF"
+            BackgroundColor="{StaticResource HealthSafetyGreen}"
+            TextColor="White"
+            FontFamily="PoppinsBold"
+            CornerRadius="10"
+            FontSize="12"/>
+    </Grid>
+    <Frame Grid.Row="2">
+
+        <Label Text="space for ad" VerticalOptions="Start" VerticalTextAlignment="Start" HorizontalOptions="Center"></Label>
+    </Frame>
+    </Grid>
 </ContentPage>

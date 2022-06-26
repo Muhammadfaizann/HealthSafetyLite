@@ -3,8 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:HealthSafetyAppLite.Controls"
              x:Class="HealthSafetyAppLite.Views.TopicViews.ToolBoxPage"
+             BackgroundImage="background.png"
              NavigationPage.HasBackButton="True">
-   <Grid RowDefinitions="*,*,*,*"
+   <Grid RowDefinitions="80,*">
+        <Label
+            Grid.Row="0"
+            FontSize="20"
+            VerticalOptions="Center"
+            VerticalTextAlignment="Center"
+            Style="{StaticResource PoppinsBoldLabel}"
+            Text="Toolbox"/>
+   <Grid Grid.Row="1" RowDefinitions="*,*,*,*"
           ColumnDefinitions="*,*"
           Padding="40,40"
           ColumnSpacing="40"
@@ -36,7 +45,7 @@
                              x:Name="electricity"
                              Grid.Row="1"
                              Grid.Column="0"
-                             Image="workstation.png"
+                             Image="Electricity.png"
                              >
             <controls:MenuButton.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding NavigationCommand}"
@@ -47,7 +56,7 @@
                              x:Name="fire"
                              Grid.Row="1"
                              Grid.Column="1"
-                             Image="riskmanagement.png"
+                             Image="Fire.png"
                              >
             <controls:MenuButton.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding NavigationCommand}"
@@ -58,7 +67,7 @@
                              x:Name="ladder"
                              Grid.Row="2"
                              Grid.Column="0"
-                             Image="securitycamera.png"
+                             Image="Ladders.png"
                              >
             <controls:MenuButton.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding NavigationCommand}"
@@ -69,7 +78,7 @@
                              x:Name="houseKeeping"
                              Grid.Row="2"
                              Grid.Column="1"
-                             Image="team.png"
+                             Image="Cleaning.png"
                              >
             <controls:MenuButton.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding NavigationCommand}"
@@ -80,7 +89,7 @@
                              x:Name="hazardousSubs"
                              Grid.Row="3"
                              Grid.Column="0"
-                             Image="search.png"
+                             Image="harzdous.png"
                              >
             <controls:MenuButton.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding NavigationCommand}"
@@ -91,7 +100,7 @@
                               x:Name="handTool"
                              Grid.Row="3"
                              Grid.Column="1"
-                             Image="toolbox.png"
+                             Image="handtool.png"
                              >
             <controls:MenuButton.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding NavigationCommand}"
@@ -101,5 +110,5 @@
         
 
     </Grid>
-    
+    </Grid>
 </ContentPage>

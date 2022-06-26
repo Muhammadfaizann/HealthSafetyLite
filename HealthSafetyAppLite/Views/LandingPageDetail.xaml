@@ -7,7 +7,7 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              Title="Health and Safety topics"
             BackgroundImageSource="background.png">
-    
+        
         <Grid RowDefinitions="*,*,*,*"
           ColumnDefinitions="*,*"
           Padding="40,40"
@@ -102,7 +102,7 @@
             </controls:MenuButton.GestureRecognizers>
         </controls:MenuButton>
         
+        </Grid>
 
-    </Grid>
     
 </ContentPage>

@@ -171,5 +171,19 @@
     <BundleResource Include="Resources\Contactus.svg" />
     <BundleResource Include="Resources\calendar.png" />
     <BundleResource Include="Resources\calendar.svg" />
+    <BundleResource Include="Resources\Cleaning.svg" />
+    <BundleResource Include="Resources\Clock.svg" />
+    <BundleResource Include="Resources\Electricity.svg" />
+    <BundleResource Include="Resources\Fire.svg" />
+    <BundleResource Include="Resources\handtool.svg" />
+    <BundleResource Include="Resources\harzdous.svg" />
+    <BundleResource Include="Resources\Ladders.svg" />
+    <BundleResource Include="Resources\Cleaning.png" />
+    <BundleResource Include="Resources\Clock.png" />
+    <BundleResource Include="Resources\Electricity.png" />
+    <BundleResource Include="Resources\Fire.png" />
+    <BundleResource Include="Resources\handtool.png" />
+    <BundleResource Include="Resources\harzdous.png" />
+    <BundleResource Include="Resources\Ladders.png" />
   </ItemGroup>
 </Project>
