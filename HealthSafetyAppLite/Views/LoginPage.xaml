@@ -21,6 +21,10 @@
                                    Text="{Binding Password}"/>
             <Label Text="Forgot your password?" TextColor="{StaticResource HealthSafetyCharcoal}"
                HorizontalOptions="End"/>
+            <ActivityIndicator IsRunning="{Binding IsBusy}"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Color="{StaticResource HealthSafetyGreen}"/>
         </StackLayout>
 
         <StackLayout Margin="0,40,0,0">
@@ -49,5 +53,6 @@
             WidthRequest="100"
             HorizontalOptions="Center"
             VerticalOptions="End"></forms:SvgCachedImage>
+        
     </StackLayout>
 </ContentPage>

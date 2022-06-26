@@ -18,6 +18,10 @@
                CornerRadius="{ OnPlatform Android=50, iOS=20}">
             <DatePicker Date="{Binding DOB}"/>
         </Frame>
+        <ActivityIndicator IsRunning="{Binding IsBusy}"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Color="{StaticResource HealthSafetyGreen}"/>
         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,50,0,0">
             <CheckBox VerticalOptions="Center"/>
             <Label Text="I accept terms and condtion" VerticalOptions="Center"/>

@@ -22,8 +22,12 @@ namespace HealthSafetyAppLite.ViewModels
             SignUpCommand = new Command( () => { SignUp(); });
 
             SecondSignupPageCommand = new Command(async () =>
-              {
+              {  if (IsBusy)
+                      return;
+
+                  IsBusy = true;
                   await Navigation.PushModalAsync(new SignupPageSecond());
+                  IsBusy = false;
               });
         }
 
