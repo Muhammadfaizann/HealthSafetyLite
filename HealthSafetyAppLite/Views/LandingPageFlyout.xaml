@@ -67,6 +67,9 @@
                    FontFamily="PoppinsBold"
                    FontAttributes="Bold"
                    FontSize="16"/>
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding LogOutCommand}"/>
+            </StackLayout.GestureRecognizers>
         </StackLayout>
     </Grid>
 </ContentPage>

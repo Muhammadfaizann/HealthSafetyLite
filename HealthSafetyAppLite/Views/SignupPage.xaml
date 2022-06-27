@@ -16,7 +16,10 @@
         <controls:RoundedEntry PlaceHolder="Password" Text="{Binding Password}" IsPassword="True"/>
         <controls:RoundedEntry PlaceHolder="Confirm Password" Text="{Binding ConfirmPassword}" IsPassword="True"/>
         <controls:RoundedEntry PlaceHolder="Telephone Number" Text="{Binding Telephone}"/>
-
+        <ActivityIndicator IsRunning="{Binding IsBusy}"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Color="{StaticResource HealthSafetyGreen}"/>
         <Button Text="Next" Command="{Binding SecondSignupPageCommand}"
                     BackgroundColor="{StaticResource HealthSafetyGreen}" Margin="0,60,0,0"
                     CornerRadius="{ OnPlatform Android=30, iOS=20}"

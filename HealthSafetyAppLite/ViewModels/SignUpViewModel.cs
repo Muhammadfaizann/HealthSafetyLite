@@ -22,8 +22,12 @@ namespace HealthSafetyAppLite.ViewModels
             SignUpCommand = new Command( () => { SignUp(); });
 
             SecondSignupPageCommand = new Command(async () =>
-              {
-                  await Navigation.PushModalAsync(new SignupPageSecond());
+              {  if (IsBusy)
+                      return;
+
+                  IsBusy = true;
+                  await Navigation.PushModalAsync(new SignupPageSecond(this));
+                  IsBusy = false;
               });
         }
 
@@ -74,6 +78,7 @@ namespace HealthSafetyAppLite.ViewModels
                 if (Result)
                 {
                     await App.Current.MainPage.DisplayAlert("Success", "Registered Successfully", "Ok");
+                    await Navigation.PopModalAsync();
                     await Navigation.PopModalAsync();
                 }
                 else

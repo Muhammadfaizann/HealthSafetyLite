@@ -2,12 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="HealthSafetyAppLite.Views.TopicViews.ManualRiskToolPage"
+             BackgroundImage="background.png"
              NavigationPage.HasBackButton="True">
    <Grid RowDefinitions="*,35,60">
     <ScrollView Grid.Row="0">
-        <Grid RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto" Padding="20" >
+        <Grid RowDefinitions="auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto,auto" Padding="20" >
             <Label
             Grid.Row="0"
+            FontSize="20"
             Style="{StaticResource PoppinsBoldLabel}"
             Text="Manual  handling  risk assessment"/>
             
@@ -102,210 +104,169 @@
                <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Task"></Label>
                </Grid>    
         </Frame>
-        <Frame
-               Grid.Row="7"
-               Margin="0"
-               Padding="0"
-               HasShadow="False"
-               HeightRequest="30"
-               CornerRadius="10"
-               BackgroundColor="{StaticResource HsBackground}">
-               <Grid ColumnDefinitions="100,*">
-               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
-                       <Label Text="1.1 " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
+       
+             
+               <yummy:PancakeView Grid.Row="7" Padding="10" Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,10,0,0" HorizontalOptions="FillAndExpand" HeightRequest="60" >
+                   <Grid ColumnDefinitions="*,*,*">
+                   <Label Grid.Column="0" Text="Risk Factor " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" HorizontalTextAlignment="Center" TextColor="White"/>
+                   <Label Grid.Column="1" Text="Guidelines to degree of risk" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" HorizontalTextAlignment="Center" TextColor="White"/>
+                   <Label Grid.Column="2" Text="Comment/Assumptions " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="End" FontSize="14" HorizontalTextAlignment="Center" TextColor="White"/>
+                   </Grid>
                </yummy:PancakeView>
-               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Space"></Label>
-               </Grid>    
-        </Frame>
-        <Label Grid.Row="8" FontSize="14" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start"
-               Text="Describe the space around your workstation (i.e. not the size of the desk)"
-                     FontAttributes="Bold">
-
-        </Label>
-        <Picker Grid.Row="9" x:Name="picker_1" Title="Select an option"  >
-         <Picker.ItemsSource>
-             <x:Array Type="{x:Type x:String}">
-             <x:String>Adequate</x:String>
-             <x:String>Inadequate</x:String>
-             </x:Array>
-         </Picker.ItemsSource>
-        </Picker>
-            <Frame
-               Grid.Row="10"
-               Margin="0"
-               Padding="0"
-               HasShadow="False"
-               HeightRequest="30"
-               CornerRadius="10"
-               BackgroundColor="{StaticResource HsBackground}">
-               <Grid ColumnDefinitions="100,*">
-               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
-                       <Label Text="1.2 " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
-               </yummy:PancakeView>
-               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Lighting"></Label>
-               </Grid>    
+                 
+        
+        <Grid Grid.Row="8" ColumnDefinitions="*,*,*">
+            <Frame Grid.Column="0" HasShadow="False" >
+                <Label Text="Frequency " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
             </Frame>
-             <Label Grid.Row="11" FontSize="14" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start"
-               Text="How bright is the lighting at your workstation?"
-                     FontAttributes="Bold">
-
-        </Label>
-        <Picker Grid.Row="12" Title="Select an option"  >
-         <Picker.ItemsSource>
-             <x:Array Type="{x:Type x:String}">
-             <x:String>About right</x:String>
-             <x:String>Too bright</x:String>
-              <x:String>Too dark</x:String>
-             </x:Array>
-         </Picker.ItemsSource>
-        </Picker>
-           <Frame
-               Grid.Row="13"
-               Margin="0"
-               Padding="0"
-               HasShadow="False"
-               HeightRequest="30"
-               CornerRadius="10"
-               BackgroundColor="{StaticResource HsBackground}">
-               <Grid ColumnDefinitions="100,*">
-               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
-                       <Label Text="1.3 " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
-               </yummy:PancakeView>
-               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Control"></Label>
-               </Grid>    
+            <Frame Grid.Column="1" HasShadow="False" >
+                <Grid Padding="-10" RowDefinitions="*,*,*" ColumnDefinitions="*,2*" RowSpacing="0">
+                    <CheckBox Grid.Column="0" Grid.Row="0"  HorizontalOptions="End" Color="Red"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text=">8 per minute" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="1"  HorizontalOptions="End" Color="Yellow"/>
+                    <Label Grid.Column="1" Grid.Row="1" Text=">2-8 per minute " Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="2"  HorizontalOptions="End" Color="Green"/>
+                    <Label Grid.Column="1" Grid.Row="2" Text=">2 per minute " Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    
+                </Grid>
             </Frame>
-             <Label Grid.Row="14" FontSize="14" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start"
-               Text="What control do you have over local lighting (switching lights on or off, opening/closing blinds or curtains)?"
-                     FontAttributes="Bold">
-
-        </Label>
-        <Picker Grid.Row="15" Title="Select an option"  >
-         <Picker.ItemsSource>
-             <x:Array Type="{x:Type x:String}">
-             <x:String>Full control</x:String>
-             <x:String>Some control</x:String>
-              <x:String>No control</x:String>
-             </x:Array>
-         </Picker.ItemsSource>
-        </Picker>
-            <Frame
+            <Frame Grid.Column="2" BackgroundColor="Red" HasShadow="False" Padding="0" >
+                <Editor BackgroundColor="{StaticResource HsLightGray}"/>
+            </Frame>
+        </Grid>
+        <Grid Grid.Row="9" ColumnDefinitions="*,*,*">
+            <Frame Grid.Column="0" HasShadow="False" >
+                <Label Text="Stooping " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+            </Frame>
+            <Frame Grid.Column="1" HasShadow="False" >
+                <Grid Padding="-10" RowDefinitions="*,*,*" ColumnDefinitions="*,2*" RowSpacing="0">
+                    <CheckBox Grid.Column="0" Grid.Row="0"  HorizontalOptions="End" Color="Red"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text=">30 degrees" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="1"  HorizontalOptions="End" Color="Yellow"/>
+                    <Label Grid.Column="1" Grid.Row="1" Text=">0-30 degrees" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="2"  HorizontalOptions="End" Color="Green"/>
+                    <Label Grid.Column="1" Grid.Row="2" Text="No stooping" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    
+                </Grid>
+            </Frame>
+            <Frame Grid.Column="2" BackgroundColor="Red" HasShadow="False" Padding="0" >
+                <Editor BackgroundColor="{StaticResource HsLightGray}"/>
+            </Frame>
+        </Grid>
+        <Grid Grid.Row="10" ColumnDefinitions="*,*,*">
+            <Frame Grid.Column="0" HasShadow="False" >
+                <Label Text="Twisting" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+            </Frame>
+            <Frame Grid.Column="1" HasShadow="False" >
+                <Grid Padding="-10" RowDefinitions="*,*,*" ColumnDefinitions="*,2*" RowSpacing="0">
+                    <CheckBox Grid.Column="0" Grid.Row="0"  HorizontalOptions="End" Color="Red"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text="45 to 90 degrees" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="1"  HorizontalOptions="End" Color="Yellow"/>
+                    <Label Grid.Column="1" Grid.Row="1" Text="0-90 degrees" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="2"  HorizontalOptions="End" Color="Green"/>
+                    <Label Grid.Column="1" Grid.Row="2" Text="Very little and no twisting" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                </Grid>
+            </Frame>
+            <Frame Grid.Column="2" BackgroundColor="Red" HasShadow="False" Padding="0" >
+                <Editor BackgroundColor="{StaticResource HsLightGray}"/>
+            </Frame>
+        </Grid>
+        <Grid Grid.Row="11" ColumnDefinitions="*,*,*">
+            <Frame Grid.Column="0" HasShadow="False" >
+                <Label Text="Reaching" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+            </Frame>
+            <Frame Grid.Column="1" HasShadow="False" >
+                <Grid Padding="-10" RowDefinitions="*,*,*" ColumnDefinitions="*,2*" RowSpacing="0">
+                    <CheckBox Grid.Column="0" Grid.Row="0"  HorizontalOptions="End" Color="Red"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text="Arms length" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="1"  HorizontalOptions="EndAndExpand" Color="Yellow"/>
+                    <Label Grid.Column="1" Grid.Row="1" Text="Between arm length &amp; body" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="2"  HorizontalOptions="End" Color="Green"/>
+                    <Label Grid.Column="1" Grid.Row="2" Text="Close to body" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    
+                </Grid>
+            </Frame>
+            <Frame Grid.Column="2" BackgroundColor="Red" HasShadow="False" Padding="0" >
+                <Editor BackgroundColor="{StaticResource HsLightGray}"/>
+            </Frame>
+        </Grid>
+        <Grid Grid.Row="12" ColumnDefinitions="*,*,*">
+            <Frame Grid.Column="0" HasShadow="False" >
+                <Label Text="Weight" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+            </Frame>
+            <Frame Grid.Column="1" HasShadow="False" >
+                <Grid Padding="-10" RowDefinitions="*,*,*" ColumnDefinitions="*,2*" RowSpacing="0">
+                    <CheckBox Grid.Column="0" Grid.Row="0"  HorizontalOptions="End" Color="Red"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text=">25 kg" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="1"  HorizontalOptions="EndAndExpand" Color="Yellow"/>
+                    <Label Grid.Column="1" Grid.Row="1" Text=">12-25 kg" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="2"  HorizontalOptions="End" Color="Green"/>
+                    <Label Grid.Column="1" Grid.Row="2" Text=">12 kg" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    
+                </Grid>
+            </Frame>
+            <Frame Grid.Column="2" BackgroundColor="Red" HasShadow="False" Padding="0" >
+                <Editor BackgroundColor="{StaticResource HsLightGray}"/>
+            </Frame>
+        </Grid>
+        <Grid Grid.Row="13" ColumnDefinitions="*,*,*">
+            <Frame Grid.Column="0" HasShadow="False" >
+                <Label Text="Pushing/Pulling Force" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+            </Frame>
+            <Frame Grid.Column="1" HasShadow="False" >
+                <Grid Padding="-10" RowDefinitions="*,*,*" ColumnDefinitions="*,2*" RowSpacing="0">
+                    <CheckBox Grid.Column="0" Grid.Row="0"  HorizontalOptions="End" Color="Red"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text=">25 kg" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="1"  HorizontalOptions="EndAndExpand" Color="Yellow"/>
+                    <Label Grid.Column="1" Grid.Row="1" Text=">10-25 kg" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="2"  HorizontalOptions="End" Color="Green"/>
+                    <Label Grid.Column="1" Grid.Row="2" Text=">10 kg" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    
+                </Grid>
+            </Frame>
+            <Frame Grid.Column="2" BackgroundColor="Red" HasShadow="False" Padding="0" >
+                <Editor BackgroundColor="{StaticResource HsLightGray}"/>
+            </Frame>
+        </Grid>
+        <Grid Grid.Row="14" ColumnDefinitions="*,*,*">
+            <Frame Grid.Column="0" HasShadow="False" >
+                <Label Text="Distance carried" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+            </Frame>
+            <Frame Grid.Column="1" HasShadow="False" >
+                <Grid Padding="-10" RowDefinitions="*,*,*" ColumnDefinitions="*,2*" RowSpacing="0">
+                    <CheckBox Grid.Column="0" Grid.Row="0"  HorizontalOptions="End" Color="Red"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text=">10m forwards >1m backwards" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="1"  HorizontalOptions="EndAndExpand" Color="Yellow"/>
+                    <Label Grid.Column="1" Grid.Row="1" Text=">1-10m forward/ &lt;1m backwards" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="2"  HorizontalOptions="End" Color="Green"/>
+                    <Label Grid.Column="1" Grid.Row="2" Text="&lt;1 forwards/nill backwards" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>  
+                </Grid>
+            </Frame>
+            <Frame Grid.Column="2" BackgroundColor="Red" HasShadow="False" Padding="0" >
+                <Editor BackgroundColor="{StaticResource HsLightGray}"/>
+            </Frame>
+        </Grid>
+        <Grid Grid.Row="15" ColumnDefinitions="*,*,*">
+            <Frame Grid.Column="0" HasShadow="False" >
+                <Label Text="Duration of work elment/ assignmnet" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+            </Frame>
+            <Frame Grid.Column="1" HasShadow="False" >
+                <Grid Padding="-10" RowDefinitions="*,*,*" ColumnDefinitions="*,2*" RowSpacing="0">
+                    <CheckBox Grid.Column="0" Grid.Row="0"  HorizontalOptions="End" Color="Red"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text=">10 min/&lt;30 min" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="1"  HorizontalOptions="EndAndExpand" Color="Yellow"/>
+                    <Label Grid.Column="1" Grid.Row="1" Text="1-10 min" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="2"  HorizontalOptions="End" Color="Green"/>
+                    <Label Grid.Column="1" Grid.Row="2" Text="30 sec-1 min" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    
+                </Grid>
+            </Frame>
+            <Frame Grid.Column="2" BackgroundColor="Red" HasShadow="False" Padding="0" >
+                <Editor BackgroundColor="{StaticResource HsLightGray}"/>
+            </Frame>
+        </Grid>
+              <Frame
                Grid.Row="16"
-               Margin="0"
-               Padding="0"
-               HasShadow="False"
-               HeightRequest="30"
-               CornerRadius="10"
-               BackgroundColor="{StaticResource HsBackground}">
-               <Grid ColumnDefinitions="100,*">
-               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
-                       <Label Text="1.4 " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
-               </yummy:PancakeView>
-               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Reflection and glare"></Label>
-               </Grid>    
-            </Frame>
-             <Label Grid.Row="17" FontSize="14" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start"
-               Text="Do you get distracting reflections on your screen?"
-                     FontAttributes="Bold">
-
-        </Label>
-        <Picker Grid.Row="18" Title="Select an option"  >
-         <Picker.ItemsSource>
-             <x:Array Type="{x:Type x:String}">
-             <x:String>Never</x:String>
-             <x:String>Sometimes</x:String>
-              <x:String>Constantly</x:String>
-             </x:Array>
-         </Picker.ItemsSource>
-        </Picker>
-            
-            <Frame
-               Grid.Row="19"
-               Margin="0"
-               Padding="0"
-               HasShadow="False"
-               HeightRequest="30"
-               CornerRadius="10"
-               BackgroundColor="{StaticResource HsBackground}">
-               <Grid ColumnDefinitions="100,*">
-               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
-                       <Label Text="1.5 " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
-               </yummy:PancakeView>
-               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Noise"></Label>
-               </Grid>    
-            </Frame>
-             <Label Grid.Row="20" FontSize="14" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start"
-               Text="Are you distracted by noise from work equipment?"
-                     FontAttributes="Bold">
-
-        </Label>
-        <Picker Grid.Row="21" Title="Select an option"  >
-         <Picker.ItemsSource>
-             <x:Array Type="{x:Type x:String}">
-             <x:String>Never</x:String>
-             <x:String>Sometimes</x:String>
-              <x:String>Constantly</x:String>
-             </x:Array>
-         </Picker.ItemsSource>
-        </Picker>
-            <Frame
-               Grid.Row="22"
-               Margin="0"
-               Padding="0"
-               HasShadow="False"
-               HeightRequest="30"
-               CornerRadius="10"
-               BackgroundColor="{StaticResource HsBackground}">
-               <Grid ColumnDefinitions="100,*">
-               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
-                       <Label Text="1.6 " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
-               </yummy:PancakeView>
-               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Tempereture"></Label>
-               </Grid>    
-            </Frame>
-             <Label Grid.Row="23" FontSize="14" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start"
-               Text="At your workstatiton, is it usally?"
-                     FontAttributes="Bold">
-
-        </Label>
-        <Picker Grid.Row="24" Title="Select an option"  >
-         <Picker.ItemsSource>
-             <x:Array Type="{x:Type x:String}">
-             <x:String>Comfortable</x:String>
-             <x:String>Too warm</x:String>
-              <x:String>Too cold</x:String>
-             </x:Array>
-         </Picker.ItemsSource>
-        </Picker>
-           <Frame
-               Grid.Row="25"
-               Margin="0"
-               Padding="0"
-               HasShadow="False"
-               HeightRequest="30"
-               CornerRadius="10"
-               BackgroundColor="{StaticResource HsBackground}">
-               <Grid ColumnDefinitions="100,*">
-               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
-                       <Label Text="1.7 " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
-               </yummy:PancakeView>
-               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Humidity"></Label>
-               </Grid>    
-            </Frame>
-             <Label Grid.Row="26" FontSize="14" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start"
-               Text="Is the air around your workstation?"
-                     FontAttributes="Bold">
-
-        </Label>
-        <Picker Grid.Row="27" Title="Select an option"  >
-         <Picker.ItemsSource>
-             <x:Array Type="{x:Type x:String}">
-             <x:String>Comfortable</x:String>
-             <x:String>Too dry</x:String>
-             </x:Array>
-         </Picker.ItemsSource>
-        </Picker>
-             <Frame
-               Grid.Row="28"
                Margin="0"
                Padding="0"
                HasShadow="False"
@@ -316,39 +277,62 @@
                <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
                        <Label Text="2. " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
                </yummy:PancakeView>
-               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Display Screen"></Label>
+               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Load "></Label>
                </Grid>    
             </Frame>
-            <Grid Grid.Row="29" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="2.1 Can you easily adjust the brightness and contrast between the characters on screen?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
-            <Grid Grid.Row="30" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="2.2 Can the screen be tilted and swivelled?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
-            <Grid Grid.Row="31" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="2.3 Is the screen image stable and free of flicker and other persistent instabilities?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
-            <Grid Grid.Row="32" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="2.4 Is the screen at a height that is comfortable for you?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid> 
-              <Frame
-               Grid.Row="33"
+             
+             
+               <yummy:PancakeView   Grid.Row="17" Padding="10" Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,10,0,0" HorizontalOptions="FillAndExpand" HeightRequest="60" >
+                   <Grid ColumnDefinitions="*,*,*">
+                   <Label Grid.Column="0" Text="Risk Factor " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" HorizontalTextAlignment="Center" TextColor="White"/>
+                   <Label Grid.Column="1" Text="Guidelines to degree of risk" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" HorizontalTextAlignment="Center" TextColor="White"/>
+                   <Label Grid.Column="2" Text="Comment/Assumptions " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="End" FontSize="14" HorizontalTextAlignment="Center" TextColor="White"/>
+                   </Grid>
+               </yummy:PancakeView>
+                 
+      
+        <Grid Grid.Row="18" ColumnDefinitions="*,*,*">
+            <Frame Grid.Column="0" HasShadow="False" >
+                <Label Text="Part handling" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+            </Frame>
+            <Frame Grid.Column="1" HasShadow="False" >
+                <Grid Padding="-10" RowDefinitions="*,*,*" ColumnDefinitions="*,2*" RowSpacing="0">
+                    <CheckBox Grid.Column="0" Grid.Row="0"  HorizontalOptions="End" Color="Red"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text="No grasp points" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="1"  HorizontalOptions="End" Color="Yellow"/>
+                    <Label Grid.Column="1" Grid.Row="1" Text="Grasp points okay but awkward" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="2"  HorizontalOptions="End" Color="Green"/>
+                    <Label Grid.Column="1" Grid.Row="2" Text="Good grasp points" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    
+                </Grid>
+            </Frame>
+            <Frame Grid.Column="2" BackgroundColor="Red" HasShadow="False" Padding="0" >
+                <Editor BackgroundColor="{StaticResource HsLightGray}"/>
+            </Frame>
+        </Grid>
+        <Grid Grid.Row="19" ColumnDefinitions="*,*,*">
+            <Frame Grid.Column="0" HasShadow="False" >
+                <Label Text="Conditions (COSHH) " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+            </Frame>
+            <Frame Grid.Column="1" HasShadow="False" >
+                <Grid Padding="-10" RowDefinitions="*,*,*" ColumnDefinitions="*,2*" RowSpacing="0">
+                    <CheckBox Grid.Column="0" Grid.Row="0"  HorizontalOptions="End" Color="Red"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text="Unmarked potential harmful" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="1"  HorizontalOptions="End" Color="Yellow"/>
+                    <Label Grid.Column="1" Grid.Row="1" Text="Marked potential harmful" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="2"  HorizontalOptions="End" Color="Green"/>
+                    <Label Grid.Column="1" Grid.Row="2" Text="Marked harmless" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    
+                </Grid>
+            </Frame>
+            <Frame Grid.Column="2" BackgroundColor="Red" HasShadow="False" Padding="0" >
+                <Editor BackgroundColor="{StaticResource HsLightGray}"/>
+            </Frame>
+        </Grid>
+       
+         
+             <Frame
+               Grid.Row="20"
                Margin="0"
                Padding="0"
                HasShadow="False"
@@ -359,32 +343,101 @@
                <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
                        <Label Text="3. " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
                </yummy:PancakeView>
-               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Keyboard"></Label>
+               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Enviroment"></Label>
                </Grid>    
             </Frame>
-            <Grid Grid.Row="34" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="3.1 Can you adjust the keyboard to a comfortable angle?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
-            <Grid Grid.Row="35" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="3.2 Can you easily see the symbols on the keys?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
-            <Grid Grid.Row="36" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="3.3 Is there enough space to rest your hands in front of the keyboard?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid> 
-              <Frame
-               Grid.Row="37"
+            
+             
+               <yummy:PancakeView Grid.Row="21" Padding="10" Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,10,0,0" HorizontalOptions="FillAndExpand" HeightRequest="60" >
+                   <Grid ColumnDefinitions="*,*,*">
+                   <Label Grid.Column="0" Text="Risk Factor " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" HorizontalTextAlignment="Center" TextColor="White"/>
+                   <Label Grid.Column="1" Text="Guidelines to degree of risk" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" HorizontalTextAlignment="Center" TextColor="White"/>
+                   <Label Grid.Column="2" Text="Comment/Assumptions " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="End" FontSize="14" HorizontalTextAlignment="Center" TextColor="White"/>
+                   </Grid>
+               </yummy:PancakeView>
+                 
+       
+            <Grid Grid.Row="22" ColumnDefinitions="*,*,*">
+            <Frame Grid.Column="0" HasShadow="False" >
+                <Label Text="Space" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+            </Frame>
+            <Frame Grid.Column="1" HasShadow="False" >
+                <Grid Padding="-10" RowDefinitions="*,*,*" ColumnDefinitions="*,2*" RowSpacing="0">
+                    <CheckBox Grid.Column="0" Grid.Row="0"  HorizontalOptions="End" Color="Red"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text="Congested" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="1"  HorizontalOptions="End" Color="Yellow"/>
+                    <Label Grid.Column="1" Grid.Row="1" Text="Restrited" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="2"  HorizontalOptions="End" Color="Green"/>
+                    <Label Grid.Column="1" Grid.Row="2" Text="Clear" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    
+                </Grid>
+            </Frame>
+            <Frame Grid.Column="2" BackgroundColor="Red" HasShadow="False" Padding="0" >
+                <Editor BackgroundColor="{StaticResource HsLightGray}"/>
+            </Frame>
+        </Grid>
+        <Grid Grid.Row="23" ColumnDefinitions="*,*,*">
+            <Frame Grid.Column="0" HasShadow="False" >
+                <Label Text="Floor Condition" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+            </Frame>
+            <Frame Grid.Column="1" HasShadow="False" >
+                <Grid Padding="-10" RowDefinitions="*,*,*" ColumnDefinitions="*,2*" RowSpacing="0">
+                    <CheckBox Grid.Column="0" Grid.Row="0"  HorizontalOptions="End" Color="Red"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text="Slippery" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="1"  HorizontalOptions="End" Color="Yellow"/>
+                    <Label Grid.Column="1" Grid.Row="1" Text="Reasonable" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="2"  HorizontalOptions="End" Color="Green"/>
+                    <Label Grid.Column="1" Grid.Row="2" Text="Clear" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    
+                </Grid>
+            </Frame>
+            <Frame Grid.Column="2" BackgroundColor="Red" HasShadow="False" Padding="0" >
+                <Editor BackgroundColor="{StaticResource HsLightGray}"/>
+            </Frame>
+        </Grid>
+        <Grid Grid.Row="24" ColumnDefinitions="*,*,*">
+            <Frame Grid.Column="0" HasShadow="False" >
+                <Label Text="Changes in floor level" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+            </Frame>
+            <Frame Grid.Column="1" HasShadow="False" >
+                <Grid Padding="-10" RowDefinitions="*,*,*" ColumnDefinitions="*,2*" RowSpacing="0">
+                    <CheckBox Grid.Column="0" Grid.Row="0"  HorizontalOptions="End" Color="Red"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text="Steps" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="1"  HorizontalOptions="End" Color="Yellow"/>
+                    <Label Grid.Column="1" Grid.Row="1" Text="Slopes" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="2"  HorizontalOptions="End" Color="Green"/>
+                    <Label Grid.Column="1" Grid.Row="2" Text="None" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    
+                </Grid>
+            </Frame>
+            <Frame Grid.Column="2" BackgroundColor="Red" HasShadow="False" Padding="0" >
+                <Editor BackgroundColor="{StaticResource HsLightGray}"/>
+            </Frame>
+        </Grid>
+        <Grid Grid.Row="25" ColumnDefinitions="*,*,*">
+            <Frame Grid.Column="0" HasShadow="False" >
+                <Label Text="Lighting" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+            </Frame>
+            <Frame Grid.Column="1" HasShadow="False" >
+                <Grid Padding="-10" RowDefinitions="*,*,*" ColumnDefinitions="*,2*" RowSpacing="0">
+                    <CheckBox Grid.Column="0" Grid.Row="0"  HorizontalOptions="End" Color="Red"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text="Poor, Deep Shadow or grey" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="1"  HorizontalOptions="End" Color="Yellow"/>
+                    <Label Grid.Column="1" Grid.Row="1" Text="Reasonable, some shadow or glare" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="2"  HorizontalOptions="End" Color="Green"/>
+                    <Label Grid.Column="1" Grid.Row="2" Text="good or natural light" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    
+                </Grid>
+            </Frame>
+            <Frame Grid.Column="2" BackgroundColor="Red" HasShadow="False" Padding="0" >
+                <Editor BackgroundColor="{StaticResource HsLightGray}"/>
+            </Frame>
+        </Grid>
+        
+        
+          
+            <Frame
+               Grid.Row="26"
                Margin="0"
                Padding="0"
                HasShadow="False"
@@ -395,190 +448,123 @@
                <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
                        <Label Text="4. " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
                </yummy:PancakeView>
-               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Chair "></Label>
+               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Individual"></Label>
                </Grid>    
             </Frame>
-            <Grid Grid.Row="38" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="4.1 Can you adjust the height of the seat?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
-            <Grid Grid.Row="39" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="4.2 Can you adjust the height and angle of the backrest?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
-            <Grid Grid.Row="40" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="4.3 Is the chair comfortable?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
-            <Grid Grid.Row="41" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="4.4 Is the chair in a good state of repair?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid> 
-             <Frame
-               Grid.Row="42"
-               Margin="0"
-               Padding="0"
-               HasShadow="False"
-               HeightRequest="30"
-               CornerRadius="10"
-               BackgroundColor="{StaticResource HsBackground}">
-               <Grid ColumnDefinitions="100,*">
-               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
-                       <Label Text="5. " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
+           
+             
+               <yummy:PancakeView Grid.Row="27" Padding="10" Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,10,0,0" HorizontalOptions="FillAndExpand" HeightRequest="60" >
+                   <Grid ColumnDefinitions="*,*,*">
+                   <Label Grid.Column="0" Text="Risk Factor " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" HorizontalTextAlignment="Center" TextColor="White"/>
+                   <Label Grid.Column="1" Text="Guidelines to degree of risk" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" HorizontalTextAlignment="Center" TextColor="White"/>
+                   <Label Grid.Column="2" Text="Comment/Assumptions " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="End" FontSize="14" HorizontalTextAlignment="Center" TextColor="White"/>
+                   </Grid>
                </yummy:PancakeView>
-               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Desk"></Label>
-               </Grid>    
+                 
+     
+        
+        <Grid Grid.Row="28" ColumnDefinitions="*,*,*">
+            <Frame Grid.Column="0" HasShadow="False" >
+                <Label Text="Physical Status" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
             </Frame>
-            <Grid Grid.Row="43" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="5.1 Is the desk surface large enough to alloiw you to place all your equipment where you want it?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
-            <Grid Grid.Row="44" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="5.2 Is the height of the desk suitable?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
+            <Frame Grid.Column="1" HasShadow="False" >
+                <Grid Padding="-10" RowDefinitions="*,*,*" ColumnDefinitions="*,2*" RowSpacing="0">
+                    <CheckBox Grid.Column="0" Grid.Row="0"  HorizontalOptions="End" Color="Red"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text="Unfit with medical condition" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="1"  HorizontalOptions="End" Color="Yellow"/>
+                    <Label Grid.Column="1" Grid.Row="1" Text="Unfit but no medical condition" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="2"  HorizontalOptions="End" Color="Green"/>
+                    <Label Grid.Column="1" Grid.Row="2" Text="Clear" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    
+                </Grid>
+            </Frame>
+            <Frame Grid.Column="2" BackgroundColor="Red" HasShadow="False" Padding="0" >
+                <Editor BackgroundColor="{StaticResource HsLightGray}"/>
+            </Frame>
+        </Grid>
+        <Grid Grid.Row="29" ColumnDefinitions="*,*,*">
+            <Frame Grid.Column="0" HasShadow="False" >
+                <Label Text="Personal protective equipment (PPE)" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+            </Frame>
+            <Frame Grid.Column="1" HasShadow="False" >
+                <Grid Padding="-10" RowDefinitions="*,*,*" ColumnDefinitions="*,2*" RowSpacing="0">
+                    <CheckBox Grid.Column="0" Grid.Row="0"  HorizontalOptions="End" Color="Red"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text="PPE required and not provided" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="1"  HorizontalOptions="End" Color="Yellow"/>
+                    <Label Grid.Column="1" Grid.Row="1" Text="N/A" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="2"  HorizontalOptions="End" Color="Green"/>
+                    <Label Grid.Column="1" Grid.Row="2" Text="Appropriate PPE available" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    
+                </Grid>
+            </Frame>
+            <Frame Grid.Column="2" BackgroundColor="Red" HasShadow="False" Padding="0" >
+                <Editor BackgroundColor="{StaticResource HsLightGray}"/>
+            </Frame>
+        </Grid>
+            <Grid Grid.Row="30" ColumnDefinitions="*,*,*">
+            <Frame Grid.Column="0" HasShadow="False" >
+                <Label Text="Training" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+            </Frame>
+            <Frame Grid.Column="1" HasShadow="False" >
+                <Grid Padding="-10" RowDefinitions="*,*,*" ColumnDefinitions="*,2*" RowSpacing="0">
+                    <CheckBox Grid.Column="0" Grid.Row="0"  HorizontalOptions="End" Color="Red"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text="No training given" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="1"  HorizontalOptions="End" Color="Yellow"/>
+                    <Label Grid.Column="1" Grid.Row="1" Text="General training given" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="2"  HorizontalOptions="End" Color="Green"/>
+                    <Label Grid.Column="1" Grid.Row="2" Text="Specific training given" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    
+                </Grid>
+            </Frame>
+            <Frame Grid.Column="2" BackgroundColor="Red" HasShadow="False" Padding="0" >
+                <Editor BackgroundColor="{StaticResource HsLightGray}"/>
+            </Frame>
+        </Grid>
+          <Grid Grid.Row="31" ColumnDefinitions="*,*,*">
+            <Frame Grid.Column="0" HasShadow="False" >
+                <Label Text="Teamwork" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+            </Frame>
+            <Frame Grid.Column="1" HasShadow="False" >
+                <Grid Padding="-10" RowDefinitions="*,*,*" ColumnDefinitions="*,2*" RowSpacing="0">
+                    <CheckBox Grid.Column="0" Grid.Row="0"  HorizontalOptions="End" Color="Red"/>
+                    <Label Grid.Column="1" Grid.Row="0" Text="Manning less than process or not available" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="1"  HorizontalOptions="End" Color="Yellow"/>
+                    <Label Grid.Column="1" Grid.Row="1" Text="N/A" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    <CheckBox Grid.Column="0" Grid.Row="2"  HorizontalOptions="End" Color="Green"/>
+                    <Label Grid.Column="1" Grid.Row="2" Text="Manning available in line with the process" Style="{StaticResource PoppinsRegularLabel}" HorizontalOptions="Start" FontSize="12" HorizontalTextAlignment="Start"/>
+                    
+                </Grid>
+            </Frame>
+               <Frame Grid.Column="2" BackgroundColor="Red" HasShadow="False" Padding="0" >
+                <Editor BackgroundColor="{StaticResource HsLightGray}"/>
+                </Frame>
             </Grid>
             <Frame
-               Grid.Row="45"
+               Grid.Row="32"
                Margin="0"
                Padding="0"
                HasShadow="False"
                HeightRequest="30"
                CornerRadius="10"
                BackgroundColor="{StaticResource HsBackground}">
-               <Grid ColumnDefinitions="100,*">
-               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
-                       <Label Text="6. " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
+               <Grid ColumnDefinitions="100,*,*,*">
+               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HsDarkGray}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
+                       <Label Text="Total(Count) " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
                </yummy:PancakeView>
-               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Footrest"></Label>
+               <yummy:PancakeView Grid.Column="1" BackgroundColor="{StaticResource HsRed}" CornerRadius="0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
+                       <Label Text="0" Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
+               </yummy:PancakeView>
+                <yummy:PancakeView Grid.Column="2" BackgroundColor="{StaticResource HsYellow}" CornerRadius="0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
+                       <Label Text="0 " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
+               </yummy:PancakeView>
+                <yummy:PancakeView Grid.Column="3" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="0,10,0,10" HorizontalOptions="FillAndExpand" HeightRequest="15" >
+                       <Label Text="0 " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
+               </yummy:PancakeView>
                </Grid>    
             </Frame>
-            <Grid Grid.Row="46" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="6.1 If you cannot place your feet flat on the floor whilst keying, has a footrest been supplied?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
-             <Frame
-               Grid.Row="47"
-               Margin="0"
-               Padding="0"
-               HasShadow="False"
-               HeightRequest="30"
-               CornerRadius="10"
-               BackgroundColor="{StaticResource HsBackground}">
-               <Grid ColumnDefinitions="100,*">
-               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
-                       <Label Text="7. " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
-               </yummy:PancakeView>
-               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Document holder"></Label>
-               </Grid>    
-            </Frame>
-            <Grid Grid.Row="48" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="7.1 If it would be of benefit to use a document holder, has one been supplied?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
-            <Grid Grid.Row="49" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="7.1 If you have document holder, is it adjustable to suit your needs?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
-             <Frame
-               Grid.Row="50"
-               Margin="0"
-               Padding="0"
-               HasShadow="False"
-               HeightRequest="30"
-               CornerRadius="10"
-               BackgroundColor="{StaticResource HsBackground}">
-               <Grid ColumnDefinitions="100,*">
-               <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
-                       <Label Text="8. " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
-               </yummy:PancakeView>
-               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="Center" FontSize="14" Text="Training/Information"></Label>
-               </Grid>    
-            </Frame>
-            <Grid Grid.Row="51" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="8.1 Have you been informed about the risks associated with workstation equipment and how to reduce the risks?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
-            <Grid Grid.Row="52" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="8.2 Have you been informed about the arrangements to provide breaks and activity changes?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
-            <Grid Grid.Row="53" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="8.3 Have you been informed about the arrangements for the provision of eye and eyesight tests?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
-            <Grid Grid.Row="54" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="8.4 Do you know the procedures to follow if you have a problem relating to workstation equipment?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
-            <Grid Grid.Row="55" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="8.5 Have you been informed in the correct adjustment and positioning of workstation equipment?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
-            <Grid Grid.Row="56" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="8.6 Have you been informed about the importance of good posture?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
-            <Grid Grid.Row="57" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="8.7 Do you know how to adjust screen brightness and contrast?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
-            <Grid Grid.Row="58" ColumnDefinitions="*,50">
-                <Label Grid.Column="0" Style="{StaticResource PoppinsRegularLabel}" HorizontalTextAlignment="Start" FontSize="14"  Text="8.8 Do you know how to recognise visual or postural fatigue and the action to take?">
-                    </Label>
-                <Switch Grid.Column="1"
-                        OnColor="Green"
-                        ThumbColor="Green"/>
-            </Grid>
+            <Label Grid.Row="33" Text="If you have 1 or more red count and/or more then 5 amber count, dynamic risk assessment will be required."  FontSize="14" Style="{StaticResource PoppinsRegularLabel}" TextColor="Red" ></Label>
             <Frame
-               Grid.Row="59"
+               Grid.Row="34"
                Margin="0"
                Padding="10"
                HasShadow="False"
@@ -586,13 +572,13 @@
                CornerRadius="10"
                BackgroundColor="{StaticResource HsBackground}">
                 <StackLayout Orientation="Vertical">
-                <Label Text="Comments/Recommendations: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
+                <Label Text="Remarks: " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Start" FontSize="14" TextColor="{StaticResource HealthSafetyGreen}"/>
                 <Entry FontSize="14" FontAttributes="Bold"/>
                 </StackLayout>
                     
         </Frame>
         <Frame
-               Grid.Row="60"
+               Grid.Row="35"
                Margin="0"
                Padding="0"
                HasShadow="False"
@@ -603,10 +589,10 @@
                <yummy:PancakeView Grid.Column="0" BackgroundColor="{StaticResource HealthSafetyGreen}" CornerRadius="10,0,10,0" HorizontalOptions="FillAndExpand" HeightRequest="15" >
                        <Label Text="Attachments " Style="{StaticResource PoppinsBoldLabel}" HorizontalOptions="Center" FontSize="14" TextColor="White"/>
                </yummy:PancakeView>
-               <Label Grid.Column="1" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="End" FontSize="14" Text="0 of 0 of total 10"></Label>
+               <Label Grid.Column="1" Padding="0,0,10,0" Style="{StaticResource PoppinsBoldLabel}" TextColor="{StaticResource HealthSafetyGreen}" HorizontalOptions="End" FontSize="14" Text="0 of 0 of total 10"></Label>
                </Grid>    
         </Frame>
-            <Grid Grid.Row="61" ColumnDefinitions="*,*,*">
+            <Grid Grid.Row="36" ColumnDefinitions="*,*,*">
             <Button Grid.Column="0"
             Text="Previous"
             BackgroundColor="{StaticResource HsBackground}"
@@ -630,7 +616,7 @@
             CornerRadius="10"
             FontSize="14"/>
                 </Grid>
-            <Grid Grid.Row="62" ColumnDefinitions="*,*">
+            <Grid Grid.Row="37" ColumnDefinitions="*,*">
             <Button Grid.Column="0"
             Text="Take Photo"
             BackgroundColor="{StaticResource HsBackground}"
@@ -653,7 +639,7 @@
         </Grid>
     
     </ScrollView>
-    <Grid Grid.Row="1" ColumnDefinitions="*,*,*" >
+    <Grid Grid.Row="1" Padding="10,0,10,0" ColumnDefinitions="*,*,*" >
         <Button Grid.Column="0"
         Text="Open Drafts"
         BackgroundColor="{StaticResource HealthSafetyGreen}"

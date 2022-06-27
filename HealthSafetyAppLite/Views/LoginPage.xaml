@@ -5,7 +5,8 @@
              xmlns:controls="clr-namespace:HealthSafetyAppLite.Controls"
              xmlns:forms="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
              BackgroundImage="background.png"
-             x:Class="HealthSafetyAppLite.Views.LoginPage">
+             x:Class="HealthSafetyAppLite.Views.LoginPage"
+             >
     <StackLayout Padding="40,80,40,40" VerticalOptions="Center" 
                      HorizontalOptions="FillAndExpand" x:DataType="vm:LoginViewModel">
         <Label Text="Hello" FontSize="40" HorizontalOptions="Start"
@@ -21,6 +22,10 @@
                                    Text="{Binding Password}"/>
             <Label Text="Forgot your password?" TextColor="{StaticResource HealthSafetyCharcoal}"
                HorizontalOptions="End"/>
+            <ActivityIndicator IsRunning="{Binding IsBusy}"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Color="{StaticResource HealthSafetyGreen}"/>
         </StackLayout>
 
         <StackLayout Margin="0,40,0,0">
@@ -49,5 +54,6 @@
             WidthRequest="100"
             HorizontalOptions="Center"
             VerticalOptions="End"></forms:SvgCachedImage>
+        
     </StackLayout>
 </ContentPage>

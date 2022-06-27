@@ -1,4 +1,5 @@
 ﻿using HealthSafetyAppLite.Models;
+using HealthSafetyAppLite.Views;
 using HealthSafetyAppLite.Views.TopicViews;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,7 @@ namespace HealthSafetyAppLite.ViewModels
         public INavigation Navigation { get; set; }
        
         public ICommand EmailCommand { get; set; }
+        public ICommand LogOutCommand { get; set; }
         public ICommand NavigationCommand { get; set; }
         public LandingPageViewModel(INavigation navigation)
         {
@@ -23,6 +25,23 @@ namespace HealthSafetyAppLite.ViewModels
 
             EmailCommand = new Command( () => {  SendEmail(); });
             NavigationCommand = new Command((item) => { PageNavigation(item); });
+            LogOutCommand = new Command(() =>
+              {
+                  if (IsBusy)
+                      return;
+                  try
+                  {
+                      IsBusy = true;
+                      Preferences.Remove("UserName");
+                      Application.Current.MainPage = new LoginPage();
+                  }
+                  catch (Exception ex)
+                  {
+
+                  }
+                  IsBusy = false;
+
+              });
             
         }
 

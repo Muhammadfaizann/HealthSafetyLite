@@ -7,7 +7,7 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              Title="Health and Safety topics"
             BackgroundImageSource="background.png">
-    
+        
         <Grid RowDefinitions="*,*,*,*"
           ColumnDefinitions="*,*"
           Padding="40,40"
@@ -101,8 +101,11 @@
                                       CommandParameter="{Binding Source={x:Reference ToolBox},Path=Text}"/>
             </controls:MenuButton.GestureRecognizers>
         </controls:MenuButton>
-        
-
+        <ActivityIndicator IsRunning="{Binding IsBusy}" VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="CenterAndExpand" Color="{StaticResource HealthSafetyGreen}"
+                           Grid.ColumnSpan="2" Grid.RowSpan="4"
+                           />
     </Grid>
+
     
 </ContentPage>
