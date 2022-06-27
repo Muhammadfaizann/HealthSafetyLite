@@ -13,10 +13,10 @@ namespace HealthSafetyAppLite.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SignupPageSecond : ContentPage
     {
-        public SignupPageSecond()
+        public SignupPageSecond(SignUpViewModel viewModel)
         {
             InitializeComponent();
-            this.BindingContext = new SignUpViewModel(Navigation);
+            this.BindingContext = viewModel;
         }
     }
 }
