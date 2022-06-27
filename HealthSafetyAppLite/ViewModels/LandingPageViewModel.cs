@@ -25,7 +25,7 @@ namespace HealthSafetyAppLite.ViewModels
 
             EmailCommand = new Command( () => {  SendEmail(); });
             NavigationCommand = new Command((item) => { PageNavigation(item); });
-            LogOutCommand = new Command(async () =>
+            LogOutCommand = new Command(() =>
               {
                   if (IsBusy)
                       return;
@@ -33,14 +33,14 @@ namespace HealthSafetyAppLite.ViewModels
                   {
                       IsBusy = true;
                       Preferences.Remove("UserName");
-                      await Navigation.PushModalAsync(new LoginPage());
+                      Application.Current.MainPage = new LoginPage();
                   }
-                  catch(Exception ex)
+                  catch (Exception ex)
                   {
 
                   }
                   IsBusy = false;
-                  
+
               });
             
         }

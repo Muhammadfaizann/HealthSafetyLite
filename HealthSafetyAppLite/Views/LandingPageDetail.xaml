@@ -103,8 +103,8 @@
         </controls:MenuButton>
         <ActivityIndicator IsRunning="{Binding IsBusy}" VerticalOptions="CenterAndExpand"
                            HorizontalOptions="CenterAndExpand" Color="{StaticResource HealthSafetyGreen}"
-                           Grid.Row="0" Grid.RowSpan="3"
-                           Grid.ColumnSpan="2"/>
+                           Grid.ColumnSpan="2" Grid.RowSpan="4"
+                           />
     </Grid>
 
     

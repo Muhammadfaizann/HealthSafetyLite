@@ -185,5 +185,7 @@
     <BundleResource Include="Resources\handtool.png" />
     <BundleResource Include="Resources\harzdous.png" />
     <BundleResource Include="Resources\Ladders.png" />
+    <BundleResource Include="Resources\electricaltools.svg" />
+    <BundleResource Include="Resources\wheels.svg" />
   </ItemGroup>
 </Project>

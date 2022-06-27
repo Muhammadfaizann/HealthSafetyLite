@@ -12,7 +12,7 @@
             VerticalOptions="Center"
             VerticalTextAlignment="Center"
             Style="{StaticResource PoppinsBoldLabel}"
-            Text="Toolbox"/>
+            Text="Toolbox Talks"/>
    <Grid Grid.Row="1" RowDefinitions="*,*,*,*"
           ColumnDefinitions="*,*"
           Padding="40,40"
@@ -23,7 +23,7 @@
                              Text="ABRASIVE WHEELS"
                              Grid.Row="0"
                              Grid.Column="0"
-                             Image="dangersing.png">
+                             Image="wheels.svg">
             <controls:MenuButton.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding NavigationCommand}" 
                                       CommandParameter="{Binding Source={x:Reference abrasiveWheels},Path=Text}" NumberOfTapsRequired="1"/>
@@ -34,7 +34,7 @@
                              Text="ELECTRICAL TOOLS"
                              Grid.Column="1"
                              Grid.Row="0"
-                             Image="clipboard.png"
+                             Image="electricaltools.svg"
                              >
             <controls:MenuButton.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding NavigationCommand}"
@@ -45,7 +45,7 @@
                              x:Name="electricity"
                              Grid.Row="1"
                              Grid.Column="0"
-                             Image="Electricity.png"
+                             Image="Electricity.svg"
                              >
             <controls:MenuButton.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding NavigationCommand}"
@@ -56,7 +56,7 @@
                              x:Name="fire"
                              Grid.Row="1"
                              Grid.Column="1"
-                             Image="Fire.png"
+                             Image="Fire.svg"
                              >
             <controls:MenuButton.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding NavigationCommand}"
@@ -67,7 +67,7 @@
                              x:Name="ladder"
                              Grid.Row="2"
                              Grid.Column="0"
-                             Image="Ladders.png"
+                             Image="Ladders.svg"
                              >
             <controls:MenuButton.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding NavigationCommand}"
@@ -78,7 +78,7 @@
                              x:Name="houseKeeping"
                              Grid.Row="2"
                              Grid.Column="1"
-                             Image="Cleaning.png"
+                             Image="Cleaning.svg"
                              >
             <controls:MenuButton.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding NavigationCommand}"
@@ -89,7 +89,7 @@
                              x:Name="hazardousSubs"
                              Grid.Row="3"
                              Grid.Column="0"
-                             Image="harzdous.png"
+                             Image="harzdous.svg"
                              >
             <controls:MenuButton.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding NavigationCommand}"
@@ -100,7 +100,7 @@
                               x:Name="handTool"
                              Grid.Row="3"
                              Grid.Column="1"
-                             Image="handtool.png"
+                             Image="handtool.svg"
                              >
             <controls:MenuButton.GestureRecognizers>
                 <TapGestureRecognizer Command="{Binding NavigationCommand}"
